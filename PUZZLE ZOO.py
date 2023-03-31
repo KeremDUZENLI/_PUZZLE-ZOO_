@@ -34,6 +34,8 @@ from page9 import *
 
 
 # --------------------------------------------------------------------------------------------------------
+font_1 = pygame.font.SysFont("calibri", 50, True)
+# --------------------------------------------------------------------------------------------------------
 
 
 def page0():
@@ -50,6 +52,17 @@ def page0():
     # Start Button
     pygame.draw.circle(screen, (0, 255, 0), [500, 780], 50)
     screen.blit(img_next, (460, 740))
+
+
+def pageCreate(tileSprite, liste):
+    # Fill the background colour to the screen
+    screen.fill((255, 255, 255))
+
+    # Font
+    screen.blit(font_1.render("PUZZLE", True, "black"), (350, 50))
+
+    # Image Split - 1
+    screenBlit(tileSprite, liste)
 
 
 def screenBlit(tileSprite, liste):
@@ -87,32 +100,28 @@ while running:
         pygame.display.update()
 
     if page == 1:
-        # Fill the background colour to the screen
-        screen.fill((255, 255, 255))
-
-        # Font
-        font_1 = pygame.font.SysFont("calibri", 50, True)
-        screen.blit(font_1.render("PUZZLE - 1.", True, "black"), (350, 50))
-
-        # Image Split - 1
-        screenBlit(tileSprite1, yeni_liste1)
+        pageCreate(tileSprite1, yeni_liste1)
 
         # Rectangles - Middle
         rect1 = pygame.draw.rect(
             screen, (0, 0, 0), pygame.Rect(300, 200, 200, 200), 1)
-        text1 = screen.blit(font_1.render("1", True, (0, 0, 0)), (300, 200))
+        text1 = screen.blit(font_1.render(
+            "1", True, (0, 0, 0)), (300, 200))
 
         rect2 = pygame.draw.rect(
             screen, (0, 0, 0), pygame.Rect(500, 200, 200, 200), 1)
-        text2 = screen.blit(font_1.render("2", True, (0, 0, 0)), (500, 200))
+        text2 = screen.blit(font_1.render(
+            "2", True, (0, 0, 0)), (500, 200))
 
         rect3 = pygame.draw.rect(
             screen, (0, 0, 0), pygame.Rect(300, 400, 200, 200), 1)
-        text3 = screen.blit(font_1.render("3", True, (0, 0, 0)), (300, 400))
+        text3 = screen.blit(font_1.render(
+            "3", True, (0, 0, 0)), (300, 400))
 
         rect4 = pygame.draw.rect(
             screen, (0, 0, 0), pygame.Rect(500, 400, 200, 200), 1)
-        text4 = screen.blit(font_1.render("4", True, (0, 0, 0)), (500, 400))
+        text4 = screen.blit(font_1.render(
+            "4", True, (0, 0, 0)), (500, 400))
 
         # Rectangles - Bottom
         rect1a = pygame.draw.rect(
@@ -240,15 +249,7 @@ while running:
             pygame.display.update()
 
     if page == 3:
-        # Fill the background colour to the screen
-        screen.fill((255, 255, 255))
-
-        # Font
-        font_1 = pygame.font.SysFont("calibri", 50, True)
-        screen.blit(font_1.render("PUZZLE - 2.", True, "black"), (350, 50))
-
-        # Image Split - 3
-        screenBlit(tileSprite3, yeni_liste3)
+        pageCreate(tileSprite3, yeni_liste3)
 
         # Rectangles - Middle
         rect1 = pygame.draw.rect(
@@ -393,15 +394,7 @@ while running:
             pygame.display.update()
 
     if page == 5:
-        # Fill the background colour to the screen
-        screen.fill((255, 255, 255))
-
-        # Font
-        font_1 = pygame.font.SysFont("calibri", 50, True)
-        screen.blit(font_1.render("PUZZLE - 3.", True, "black"), (350, 50))
-
-        # Image Split - 5
-        screenBlit(tileSprite5, yeni_liste5)
+        pageCreate(tileSprite5, yeni_liste5)
 
         # Rectangles - Middle
         rect1 = pygame.draw.rect(
@@ -546,15 +539,7 @@ while running:
             pygame.display.update()
 
     if page == 7:
-        # Fill the background colour to the screen
-        screen.fill((255, 255, 255))
-
-        # Font
-        font_1 = pygame.font.SysFont("calibri", 50, True)
-        screen.blit(font_1.render("PUZZLE - 4.", True, "black"), (350, 50))
-
-        # Image Split - 7
-        screenBlit(tileSprite7, yeni_liste7)
+        pageCreate(tileSprite7, yeni_liste7)
 
         # Rectangles - Middle
         rect1 = pygame.draw.rect(
@@ -699,20 +684,13 @@ while running:
             pygame.display.update()
 
     if page == 9:
-        # Fill the background colour to the screen
-        screen.fill((255, 255, 255))
-
-        # Font
-        font_1 = pygame.font.SysFont("calibri", 50, True)
-        screen.blit(font_1.render("PUZZLE - 5.", True, "black"), (350, 50))
-
-        # Image Split - 9
-        screenBlit(tileSprite9, yeni_liste9)
+        pageCreate(tileSprite9, yeni_liste9)
 
         # Rectangles - Middle
         rect1 = pygame.draw.rect(
             screen, (0, 0, 0), pygame.Rect(300, 200, 200, 200), 1)
-        text1 = screen.blit(font_1.render("1", True, (0, 0, 0)), (300, 200))
+        text1 = screen.blit(font_1.render(
+            "1", True, (0, 0, 0)), (300, 200))
 
         rect2 = pygame.draw.rect(
             screen, (0, 0, 0), pygame.Rect(500, 200, 200, 200), 1)
