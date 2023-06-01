@@ -192,6 +192,73 @@ def pageUpdate(number: float):
     page = number
 
 
+def rectButtonPressed(tileSprite, liste):
+    global rect1a_button_pressed
+    global rect2a_button_pressed
+    global rect3a_button_pressed
+    global rect4a_button_pressed
+
+    if liste.index(40) == x:
+        def rect1a_button_pressed():
+            pygame.draw.rect(screen, (0, 255, 0),
+                             pygame.Rect(40, 760, 200, 200),  1)
+
+            screenBlitListe(tileSprite, liste, 40)
+
+            pygame.display.update()
+
+    else:
+        def rect1a_button_pressed():
+            pygame.draw.rect(screen, (255, 0, 0),
+                             pygame.Rect(40, 760, 200, 200),  1)
+            pygame.display.update()
+
+    if liste.index(280) == x:
+        def rect2a_button_pressed():
+            pygame.draw.rect(screen, (0, 255, 0),
+                             pygame.Rect(280, 760, 200, 200), 1)
+
+            screenBlitListe(tileSprite, liste, 280)
+
+            pygame.display.update()
+
+    else:
+        def rect2a_button_pressed():
+            pygame.draw.rect(screen, (255, 0, 0),
+                             pygame.Rect(280, 760, 200, 200),  1)
+            pygame.display.update()
+
+    if liste.index(520) == x:
+        def rect3a_button_pressed():
+            pygame.draw.rect(screen, (0, 255, 0),
+                             pygame.Rect(520, 760, 200, 200), 1)
+
+            screenBlitListe(tileSprite, liste, 520)
+
+            pygame.display.update()
+
+    else:
+        def rect3a_button_pressed():
+            pygame.draw.rect(screen, (255, 0, 0),
+                             pygame.Rect(520, 760, 200, 200),  1)
+            pygame.display.update()
+
+    if liste.index(760) == x:
+        def rect4a_button_pressed():
+            pygame.draw.rect(screen, (0, 255, 0),
+                             pygame.Rect(760, 760, 200, 200), 1)
+
+            screenBlitListe(tileSprite, liste, 760)
+
+            pygame.display.update()
+
+    else:
+        def rect4a_button_pressed():
+            pygame.draw.rect(screen, (255, 0, 0),
+                             pygame.Rect(760, 760, 200, 200),  1)
+            pygame.display.update()
+
+
 # --------------------------------------------------------------------------------------------------------
 while running:
 
@@ -226,70 +293,8 @@ while running:
         # Update
         pageUpdate(1.5)
 
-        # Next Button Function - 1
-        def circle_next_button1_pressed():
-            pygame.display.update()
-
     if page == 1.5:
-        if yeni_liste1.index(40) == x:
-            def rect1a_button_pressed():
-                pygame.draw.rect(screen, (0, 255, 0),
-                                 pygame.Rect(40, 760, 200, 200),  1)
-
-                screenBlitListe(tileSprite1, yeni_liste1, 40)
-
-                pygame.display.update()
-
-        else:
-            def rect1a_button_pressed():
-                pygame.draw.rect(screen, (255, 0, 0),
-                                 pygame.Rect(40, 760, 200, 200),  1)
-                pygame.display.update()
-
-        if yeni_liste1.index(280) == x:
-            def rect2a_button_pressed():
-                pygame.draw.rect(screen, (0, 255, 0),
-                                 pygame.Rect(280, 760, 200, 200), 1)
-
-                screenBlitListe(tileSprite1, yeni_liste1, 280)
-
-                pygame.display.update()
-
-        else:
-            def rect2a_button_pressed():
-                pygame.draw.rect(screen, (255, 0, 0),
-                                 pygame.Rect(280, 760, 200, 200),  1)
-                pygame.display.update()
-
-        if yeni_liste1.index(520) == x:
-            def rect3a_button_pressed():
-                pygame.draw.rect(screen, (0, 255, 0),
-                                 pygame.Rect(520, 760, 200, 200), 1)
-
-                screenBlitListe(tileSprite1, yeni_liste1, 520)
-
-                pygame.display.update()
-
-        else:
-            def rect3a_button_pressed():
-                pygame.draw.rect(screen, (255, 0, 0),
-                                 pygame.Rect(520, 760, 200, 200),  1)
-                pygame.display.update()
-
-        if yeni_liste1.index(760) == x:
-            def rect4a_button_pressed():
-                pygame.draw.rect(screen, (0, 255, 0),
-                                 pygame.Rect(760, 760, 200, 200), 1)
-
-                screenBlitListe(tileSprite1, yeni_liste1, 760)
-
-                pygame.display.update()
-
-        else:
-            def rect4a_button_pressed():
-                pygame.draw.rect(screen, (255, 0, 0),
-                                 pygame.Rect(760, 760, 200, 200),  1)
-                pygame.display.update()
+        rectButtonPressed(tileSprite1, yeni_liste1)
 
     if page == 2:
         # Fill the background colour to the screen
@@ -305,10 +310,6 @@ while running:
 
         # Update
         pygame.display.update()
-
-        # Next Button Function - 2
-        def circle_next_button2_pressed():
-            pygame.display.update()
 
     if page == 3:
         pageCreate(tileSprite3, yeni_liste3)
@@ -331,70 +332,8 @@ while running:
         # Update
         pageUpdate(3.5)
 
-        # Next Button Function - 3
-        def circle_next_button3_pressed():
-            pygame.display.update()
-
     if page == 3.5:
-        if yeni_liste3.index(40) == x:
-            def rect1a_button_pressed():
-                pygame.draw.rect(screen, (0, 255, 0),
-                                 pygame.Rect(40, 760, 200, 200),  1)
-
-                screenBlitListe(tileSprite3, yeni_liste3, 40)
-
-                pygame.display.update()
-
-        else:
-            def rect1a_button_pressed():
-                pygame.draw.rect(screen, (255, 0, 0),
-                                 pygame.Rect(40, 760, 200, 200),  1)
-                pygame.display.update()
-
-        if yeni_liste3.index(280) == x:
-            def rect2a_button_pressed():
-                pygame.draw.rect(screen, (0, 255, 0),
-                                 pygame.Rect(280, 760, 200, 200), 1)
-
-                screenBlitListe(tileSprite3, yeni_liste3, 280)
-
-                pygame.display.update()
-
-        else:
-            def rect2a_button_pressed():
-                pygame.draw.rect(screen, (255, 0, 0),
-                                 pygame.Rect(280, 760, 200, 200),  1)
-                pygame.display.update()
-
-        if yeni_liste3.index(520) == x:
-            def rect3a_button_pressed():
-                pygame.draw.rect(screen, (0, 255, 0),
-                                 pygame.Rect(520, 760, 200, 200), 1)
-
-                screenBlitListe(tileSprite3, yeni_liste3, 520)
-
-                pygame.display.update()
-
-        else:
-            def rect3a_button_pressed():
-                pygame.draw.rect(screen, (255, 0, 0),
-                                 pygame.Rect(520, 760, 200, 200),  1)
-                pygame.display.update()
-
-        if yeni_liste3.index(760) == x:
-            def rect4a_button_pressed():
-                pygame.draw.rect(screen, (0, 255, 0),
-                                 pygame.Rect(760, 760, 200, 200), 1)
-
-                screenBlitListe(tileSprite3, yeni_liste3, 760)
-
-                pygame.display.update()
-
-        else:
-            def rect4a_button_pressed():
-                pygame.draw.rect(screen, (255, 0, 0),
-                                 pygame.Rect(760, 760, 200, 200),  1)
-                pygame.display.update()
+        rectButtonPressed(tileSprite3, yeni_liste3)
 
     if page == 4:
         # Fill the background colour to the screen
@@ -410,10 +349,6 @@ while running:
 
         # Update
         pygame.display.update()
-
-        # Next Button Function - 4
-        def circle_next_button4_pressed():
-            pygame.display.update()
 
     if page == 5:
         pageCreate(tileSprite5, yeni_liste5)
@@ -436,70 +371,8 @@ while running:
         # Update
         pageUpdate(5.5)
 
-        # Next Button Function - 5
-        def circle_next_button5_pressed():
-            pygame.display.update()
-
     if page == 5.5:
-        if yeni_liste5.index(40) == x:
-            def rect1a_button_pressed():
-                pygame.draw.rect(screen, (0, 255, 0),
-                                 pygame.Rect(40, 760, 200, 200),  1)
-
-                screenBlitListe(tileSprite5, yeni_liste5, 40)
-
-                pygame.display.update()
-
-        else:
-            def rect1a_button_pressed():
-                pygame.draw.rect(screen, (255, 0, 0),
-                                 pygame.Rect(40, 760, 200, 200),  1)
-                pygame.display.update()
-
-        if yeni_liste5.index(280) == x:
-            def rect2a_button_pressed():
-                pygame.draw.rect(screen, (0, 255, 0),
-                                 pygame.Rect(280, 760, 200, 200), 1)
-
-                screenBlitListe(tileSprite5, yeni_liste5, 280)
-
-                pygame.display.update()
-
-        else:
-            def rect2a_button_pressed():
-                pygame.draw.rect(screen, (255, 0, 0),
-                                 pygame.Rect(280, 760, 200, 200),  1)
-                pygame.display.update()
-
-        if yeni_liste5.index(520) == x:
-            def rect3a_button_pressed():
-                pygame.draw.rect(screen, (0, 255, 0),
-                                 pygame.Rect(520, 760, 200, 200), 1)
-
-                screenBlitListe(tileSprite5, yeni_liste5, 520)
-
-                pygame.display.update()
-
-        else:
-            def rect3a_button_pressed():
-                pygame.draw.rect(screen, (255, 0, 0),
-                                 pygame.Rect(520, 760, 200, 200),  1)
-                pygame.display.update()
-
-        if yeni_liste5.index(760) == x:
-            def rect4a_button_pressed():
-                pygame.draw.rect(screen, (0, 255, 0),
-                                 pygame.Rect(760, 760, 200, 200), 1)
-
-                screenBlitListe(tileSprite5, yeni_liste5, 760)
-
-                pygame.display.update()
-
-        else:
-            def rect4a_button_pressed():
-                pygame.draw.rect(screen, (255, 0, 0),
-                                 pygame.Rect(760, 760, 200, 200),  1)
-                pygame.display.update()
+        rectButtonPressed(tileSprite5, yeni_liste5)
 
     if page == 6:
         # Fill the background colour to the screen
@@ -515,10 +388,6 @@ while running:
 
         # Update
         pygame.display.update()
-
-        # Next Button Function - 6
-        def circle_next_button6_pressed():
-            pygame.display.update()
 
     if page == 7:
         pageCreate(tileSprite7, yeni_liste7)
@@ -541,70 +410,8 @@ while running:
         # Update
         pageUpdate(7.5)
 
-        # Next Button Function - 7
-        def circle_next_button7_pressed():
-            pygame.display.update()
-
     if page == 7.5:
-        if yeni_liste7.index(40) == x:
-            def rect1a_button_pressed():
-                pygame.draw.rect(screen, (0, 255, 0),
-                                 pygame.Rect(40, 760, 200, 200),  1)
-
-                screenBlitListe(tileSprite7, yeni_liste7, 40)
-
-                pygame.display.update()
-
-        else:
-            def rect1a_button_pressed():
-                pygame.draw.rect(screen, (255, 0, 0),
-                                 pygame.Rect(40, 760, 200, 200),  1)
-                pygame.display.update()
-
-        if yeni_liste7.index(280) == x:
-            def rect2a_button_pressed():
-                pygame.draw.rect(screen, (0, 255, 0),
-                                 pygame.Rect(280, 760, 200, 200), 1)
-
-                screenBlitListe(tileSprite7, yeni_liste7, 280)
-
-                pygame.display.update()
-
-        else:
-            def rect2a_button_pressed():
-                pygame.draw.rect(screen, (255, 0, 0),
-                                 pygame.Rect(280, 760, 200, 200),  1)
-                pygame.display.update()
-
-        if yeni_liste7.index(520) == x:
-            def rect3a_button_pressed():
-                pygame.draw.rect(screen, (0, 255, 0),
-                                 pygame.Rect(520, 760, 200, 200), 1)
-
-                screenBlitListe(tileSprite7, yeni_liste7, 520)
-
-                pygame.display.update()
-
-        else:
-            def rect3a_button_pressed():
-                pygame.draw.rect(screen, (255, 0, 0),
-                                 pygame.Rect(520, 760, 200, 200),  1)
-                pygame.display.update()
-
-        if yeni_liste7.index(760) == x:
-            def rect4a_button_pressed():
-                pygame.draw.rect(screen, (0, 255, 0),
-                                 pygame.Rect(760, 760, 200, 200), 1)
-
-                screenBlitListe(tileSprite7, yeni_liste7, 760)
-
-                pygame.display.update()
-
-        else:
-            def rect4a_button_pressed():
-                pygame.draw.rect(screen, (255, 0, 0),
-                                 pygame.Rect(760, 760, 200, 200),  1)
-                pygame.display.update()
+        rectButtonPressed(tileSprite7, yeni_liste7)
 
     if page == 8:
         # Fill the background colour to the screen
@@ -620,10 +427,6 @@ while running:
 
         # Update
         pygame.display.update()
-
-        # Next Button Function - 8
-        def circle_next_button8_pressed():
-            pygame.display.update()
 
     if page == 9:
         pageCreate(tileSprite9, yeni_liste9)
@@ -646,70 +449,8 @@ while running:
         # Update
         pageUpdate(9.5)
 
-        # Next Button Function - 9
-        def circle_next_button9_pressed():
-            pygame.display.update()
-
     if page == 9.5:
-        if yeni_liste9.index(40) == x:
-            def rect1a_button_pressed():
-                pygame.draw.rect(screen, (0, 255, 0),
-                                 pygame.Rect(40, 760, 200, 200),  1)
-
-                screenBlitListe(tileSprite9, yeni_liste9, 40)
-
-                pygame.display.update()
-
-        else:
-            def rect1a_button_pressed():
-                pygame.draw.rect(screen, (255, 0, 0),
-                                 pygame.Rect(40, 760, 200, 200),  1)
-                pygame.display.update()
-
-        if yeni_liste9.index(280) == x:
-            def rect2a_button_pressed():
-                pygame.draw.rect(screen, (0, 255, 0),
-                                 pygame.Rect(280, 760, 200, 200), 1)
-
-                screenBlitListe(tileSprite9, yeni_liste9, 280)
-
-                pygame.display.update()
-
-        else:
-            def rect2a_button_pressed():
-                pygame.draw.rect(screen, (255, 0, 0),
-                                 pygame.Rect(280, 760, 200, 200),  1)
-                pygame.display.update()
-
-        if yeni_liste9.index(520) == x:
-            def rect3a_button_pressed():
-                pygame.draw.rect(screen, (0, 255, 0),
-                                 pygame.Rect(520, 760, 200, 200), 1)
-
-                screenBlitListe(tileSprite9, yeni_liste9, 520)
-
-                pygame.display.update()
-
-        else:
-            def rect3a_button_pressed():
-                pygame.draw.rect(screen, (255, 0, 0),
-                                 pygame.Rect(520, 760, 200, 200),  1)
-                pygame.display.update()
-
-        if yeni_liste9.index(760) == x:
-            def rect4a_button_pressed():
-                pygame.draw.rect(screen, (0, 255, 0),
-                                 pygame.Rect(760, 760, 200, 200), 1)
-
-                screenBlitListe(tileSprite9, yeni_liste9, 760)
-
-                pygame.display.update()
-
-        else:
-            def rect4a_button_pressed():
-                pygame.draw.rect(screen, (255, 0, 0),
-                                 pygame.Rect(760, 760, 200, 200),  1)
-                pygame.display.update()
+        rectButtonPressed(tileSprite9, yeni_liste9)
 
     if page == 10:
         # Fill the background colour to the screen
@@ -725,10 +466,6 @@ while running:
 
         # Update
         pygame.display.update()
-
-        # Next Button Function - 10
-        def circle_next_button10_pressed():
-            pygame.display.update()
 
     # EVENTS --------------------------------------------------
 
@@ -771,12 +508,12 @@ while running:
                 x = 0
 
             if (circle_next_button1.collidepoint(mouse_pos)):
-                circle_next_button1_pressed()
+                pygame.display.update()
                 page = 2
 
             # -- Page 2 ----------------------------------------------------------------------
             if (circle_next_button2.collidepoint(mouse_pos)):
-                circle_next_button2_pressed()
+                pygame.display.update()
                 page = 3
                 x = 0
 
@@ -803,12 +540,12 @@ while running:
                 x = 0
 
             if (circle_next_button3.collidepoint(mouse_pos)):
-                circle_next_button3_pressed()
+                pygame.display.update()
                 page = 4
 
             # -- Page 4 ----------------------------------------------------------------------
             if (circle_next_button4.collidepoint(mouse_pos)):
-                circle_next_button4_pressed()
+                pygame.display.update()
                 page = 5
                 x = 0
 
@@ -835,12 +572,12 @@ while running:
                 x = 0
 
             if (circle_next_button5.collidepoint(mouse_pos)):
-                circle_next_button5_pressed()
+                pygame.display.update()
                 page = 6
 
             # -- Page 6 ----------------------------------------------------------------------
             if (circle_next_button6.collidepoint(mouse_pos)):
-                circle_next_button6_pressed()
+                pygame.display.update()
                 page = 7
                 x = 0
 
@@ -867,12 +604,12 @@ while running:
                 x = 0
 
             if (circle_next_button7.collidepoint(mouse_pos)):
-                circle_next_button7_pressed()
+                pygame.display.update()
                 page = 8
 
             # -- Page 8 ----------------------------------------------------------------------
             if (circle_next_button8.collidepoint(mouse_pos)):
-                circle_next_button8_pressed()
+                pygame.display.update()
                 page = 9
                 x = 0
 
@@ -899,11 +636,11 @@ while running:
                 x = 0
 
             if (circle_next_button9.collidepoint(mouse_pos)):
-                circle_next_button9_pressed()
+                pygame.display.update()
                 page = 10
 
             # -- Page 10 ----------------------------------------------------------------------
             if (circle_next_button10.collidepoint(mouse_pos)):
-                circle_next_button10_pressed()
+                pygame.display.update()
                 page = 11
                 x = 0
