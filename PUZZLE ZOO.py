@@ -88,44 +88,25 @@ def screenBlitListe(tileSprite, liste, value):
 
 def drawMiddleRectangles():
     # Rectangles - Middle
-    rect1 = pygame.draw.rect(
-        screen, (0, 0, 0), pygame.Rect(300, 200, 200, 200), 1)
-    text1 = screen.blit(font_1.render(
-        "1", True, (0, 0, 0)), (300, 200))
+    pygame.draw.rect(screen, (0, 0, 0), pygame.Rect(300, 200, 200, 200), 1)
+    screen.blit(font_1.render("1", True, (0, 0, 0)), (300, 200))
 
-    rect2 = pygame.draw.rect(
-        screen, (0, 0, 0), pygame.Rect(500, 200, 200, 200), 1)
-    text2 = screen.blit(font_1.render(
-        "2", True, (0, 0, 0)), (500, 200))
+    pygame.draw.rect(screen, (0, 0, 0), pygame.Rect(500, 200, 200, 200), 1)
+    screen.blit(font_1.render("2", True, (0, 0, 0)), (500, 200))
 
-    rect3 = pygame.draw.rect(
-        screen, (0, 0, 0), pygame.Rect(300, 400, 200, 200), 1)
-    text3 = screen.blit(font_1.render(
-        "3", True, (0, 0, 0)), (300, 400))
+    pygame.draw.rect(screen, (0, 0, 0), pygame.Rect(300, 400, 200, 200), 1)
+    screen.blit(font_1.render("3", True, (0, 0, 0)), (300, 400))
 
-    rect4 = pygame.draw.rect(
-        screen, (0, 0, 0), pygame.Rect(500, 400, 200, 200), 1)
-    text4 = screen.blit(font_1.render(
-        "4", True, (0, 0, 0)), (500, 400))
+    pygame.draw.rect(screen, (0, 0, 0), pygame.Rect(500, 400, 200, 200), 1)
+    screen.blit(font_1.render("4", True, (0, 0, 0)), (500, 400))
 
 
 def drawBottomRectangles():
     # Rectangles - Bottom
-    pygame.draw.rect(
-        screen, (0, 0, 0), pygame.Rect(40, 760, 200, 200),  1)
-    rect1a_button = pygame.Rect(40, 760, 200, 200)
-
-    pygame.draw.rect(
-        screen, (0, 0, 0), pygame.Rect(280, 760, 200, 200), 1)
-    rect2a_button = pygame.Rect(280, 760, 200, 200)
-
-    pygame.draw.rect(
-        screen, (0, 0, 0), pygame.Rect(520, 760, 200, 200), 1)
-    rect3a_button = pygame.Rect(520, 760, 200, 200)
-
-    pygame.draw.rect(
-        screen, (0, 0, 0), pygame.Rect(760, 760, 200, 200), 1)
-    rect4a_button = pygame.Rect(760, 760, 200, 200)
+    pygame.draw.rect(screen, (0, 0, 0), pygame.Rect(40, 760, 200, 200),  1)
+    pygame.draw.rect(screen, (0, 0, 0), pygame.Rect(280, 760, 200, 200), 1)
+    pygame.draw.rect(screen, (0, 0, 0), pygame.Rect(520, 760, 200, 200), 1)
+    pygame.draw.rect(screen, (0, 0, 0), pygame.Rect(760, 760, 200, 200), 1)
 
 
 def drawLine():
@@ -139,23 +120,76 @@ def buttonRestart(number: int):
     screen.blit(img_restart, (860, 210))
 
     if number == 1:
-        restart_1 = pygame.Rect(850, 200, 100, 100)
+        global circle_restart_button1
+        circle_restart_button1 = pygame.Rect(850, 200, 100, 100)
 
     if number == 2:
-        restart_2 = pygame.Rect(850, 200, 100, 100)
+        global circle_restart_button2
+        circle_restart_button2 = pygame.Rect(850, 200, 100, 100)
 
     if number == 3:
-        restart_3 = pygame.Rect(850, 200, 100, 100)
+        global circle_restart_button3
+        circle_restart_button3 = pygame.Rect(850, 200, 100, 100)
 
     if number == 4:
-        restart_4 = pygame.Rect(850, 200, 100, 100)
+        global circle_restart_button4
+        circle_restart_button4 = pygame.Rect(850, 200, 100, 100)
 
     if number == 5:
-        restart_5 = pygame.Rect(850, 200, 100, 100)
+        global circle_restart_button5
+        circle_restart_button5 = pygame.Rect(850, 200, 100, 100)
 
 
-def buttonRestartPressed():
+def buttonNext(number: int):
+    # Next Button - 1
+    pygame.draw.circle(screen, (0, 255, 0), [900, 550], 50)
+    screen.blit(img_next, (860, 510))
+
+    if number == 1:
+        global circle_next_button1
+        circle_next_button1 = pygame.Rect(850, 500, 100, 100)
+
+    if number == 2:
+        global circle_next_button2
+        circle_next_button2 = pygame.Rect(850, 500, 100, 100)
+
+    if number == 3:
+        global circle_next_button3
+        circle_next_button3 = pygame.Rect(850, 500, 100, 100)
+
+    if number == 4:
+        global circle_next_button4
+        circle_next_button4 = pygame.Rect(850, 500, 100, 100)
+
+    if number == 5:
+        global circle_next_button5
+        circle_next_button5 = pygame.Rect(850, 500, 100, 100)
+
+    if number == 6:
+        global circle_next_button6
+        circle_next_button6 = pygame.Rect(850, 500, 100, 100)
+
+    if number == 7:
+        global circle_next_button7
+        circle_next_button7 = pygame.Rect(850, 500, 100, 100)
+
+    if number == 8:
+        global circle_next_button8
+        circle_next_button8 = pygame.Rect(850, 500, 100, 100)
+
+    if number == 9:
+        global circle_next_button9
+        circle_next_button9 = pygame.Rect(850, 500, 100, 100)
+
+    if number == 10:
+        global circle_next_button10
+        circle_next_button10 = pygame.Rect(850, 500, 100, 100)
+
+
+def pageUpdate(number: float):
     pygame.display.update()
+    global page
+    page = number
 
 
 # --------------------------------------------------------------------------------------------------------
@@ -165,8 +199,7 @@ while running:
     if page == 0:
         page0()
         circle_next_button0 = pygame.Rect(450, 730, 100, 100)
-        pygame.display.update()
-        page = 0.5
+        pageUpdate(0.5)
 
     # Next Button Function - 1
     def circle_next_button0_pressed():
@@ -187,14 +220,11 @@ while running:
         # Restart Button
         buttonRestart(1)
 
-        # Next Button - 1
-        circle_next1 = pygame.draw.circle(screen, (0, 255, 0), [900, 550], 50)
-        screen.blit(img_next, (860, 510))
-        circle_next_button1 = pygame.Rect(850, 500, 100, 100)
+        # Next Button
+        buttonNext(1)
 
         # Update
-        pygame.display.update()
-        page = 1.5
+        pageUpdate(1.5)
 
         # Next Button Function - 1
         def circle_next_button1_pressed():
@@ -270,10 +300,8 @@ while running:
         real_img2 = pygame.transform.scale(real_img2, (500, 500))
         screen.blit(real_img2, (250, 250))
 
-        # Next Button - 2
-        circle_next2 = pygame.draw.circle(screen, (0, 255, 0), [900, 550], 50)
-        screen.blit(img_next, (860, 510))
-        circle_next_button2 = pygame.Rect(850, 500, 100, 100)
+        # Next Button
+        buttonNext(2)
 
         # Update
         pygame.display.update()
@@ -297,14 +325,11 @@ while running:
         # Restart Button
         buttonRestart(2)
 
-        # Next Button - 3
-        circle_next3 = pygame.draw.circle(screen, (0, 255, 0), [900, 550], 50)
-        screen.blit(img_next, (860, 510))
-        circle_next_button3 = pygame.Rect(850, 500, 100, 100)
+        # Next Button
+        buttonNext(3)
 
         # Update
-        pygame.display.update()
-        page = 3.5
+        pageUpdate(3.5)
 
         # Next Button Function - 3
         def circle_next_button3_pressed():
@@ -380,10 +405,8 @@ while running:
         real_img4 = pygame.transform.scale(real_img4, (500, 500))
         screen.blit(real_img4, (250, 250))
 
-        # Next Button - 4
-        circle_next4 = pygame.draw.circle(screen, (0, 255, 0), [900, 550], 50)
-        screen.blit(img_next, (860, 510))
-        circle_next_button4 = pygame.Rect(850, 500, 100, 100)
+        # Next Button
+        buttonNext(4)
 
         # Update
         pygame.display.update()
@@ -407,14 +430,11 @@ while running:
         # Restart Button
         buttonRestart(3)
 
-        # Next Button - 5
-        circle_next5 = pygame.draw.circle(screen, (0, 255, 0), [900, 550], 50)
-        screen.blit(img_next, (860, 510))
-        circle_next_button5 = pygame.Rect(850, 500, 100, 100)
+        # Next Button
+        buttonNext(5)
 
         # Update
-        pygame.display.update()
-        page = 5.5
+        pageUpdate(5.5)
 
         # Next Button Function - 5
         def circle_next_button5_pressed():
@@ -490,10 +510,8 @@ while running:
         real_img6 = pygame.transform.scale(real_img6, (500, 500))
         screen.blit(real_img6, (250, 250))
 
-        # Next Button - 6
-        circle_next6 = pygame.draw.circle(screen, (0, 255, 0), [900, 550], 50)
-        screen.blit(img_next, (860, 510))
-        circle_next_button6 = pygame.Rect(850, 500, 100, 100)
+        # Next Button
+        buttonNext(6)
 
         # Update
         pygame.display.update()
@@ -517,14 +535,11 @@ while running:
         # Restart Button
         buttonRestart(4)
 
-        # Next Button - 7
-        circle_next7 = pygame.draw.circle(screen, (0, 255, 0), [900, 550], 50)
-        screen.blit(img_next, (860, 510))
-        circle_next_button7 = pygame.Rect(850, 500, 100, 100)
+        # Next Button
+        buttonNext(7)
 
         # Update
-        pygame.display.update()
-        page = 7.5
+        pageUpdate(7.5)
 
         # Next Button Function - 7
         def circle_next_button7_pressed():
@@ -600,10 +615,8 @@ while running:
         real_img8 = pygame.transform.scale(real_img8, (500, 500))
         screen.blit(real_img8, (250, 250))
 
-        # Next Button - 8
-        circle_next8 = pygame.draw.circle(screen, (0, 255, 0), [900, 550], 50)
-        screen.blit(img_next, (860, 510))
-        circle_next_button8 = pygame.Rect(850, 500, 100, 100)
+        # Next Button
+        buttonNext(8)
 
         # Update
         pygame.display.update()
@@ -627,14 +640,11 @@ while running:
         # Restart Button
         buttonRestart(5)
 
-        # Next Button - 9
-        circle_next9 = pygame.draw.circle(screen, (0, 255, 0), [900, 550], 50)
-        screen.blit(img_next, (860, 510))
-        circle_next_button9 = pygame.Rect(850, 500, 100, 100)
+        # Next Button
+        buttonNext(9)
 
         # Update
-        pygame.display.update()
-        page = 9.5
+        pageUpdate(9.5)
 
         # Next Button Function - 9
         def circle_next_button9_pressed():
@@ -710,10 +720,8 @@ while running:
         real_img10 = pygame.transform.scale(real_img10, (500, 500))
         screen.blit(real_img10, (250, 250))
 
-        # Next Button - 10
-        circle_next10 = pygame.draw.circle(screen, (0, 255, 0), [900, 550], 50)
-        screen.blit(img_next, (860, 510))
-        circle_next_button10 = pygame.Rect(850, 500, 100, 100)
+        # Next Button
+        buttonNext(10)
 
         # Update
         pygame.display.update()
@@ -757,8 +765,8 @@ while running:
                 rect4a_button_pressed()
                 x = x + 1
 
-            if (restart_1.collidepoint(mouse_pos)):
-                buttonRestartPressed()
+            if (circle_restart_button1.collidepoint(mouse_pos)):
+                pygame.display.update()
                 page = 1
                 x = 0
 
@@ -789,8 +797,8 @@ while running:
                 rect4a_button_pressed()
                 x = x + 1
 
-            if (restart_2.collidepoint(mouse_pos)):
-                buttonRestartPressed()
+            if (circle_restart_button2.collidepoint(mouse_pos)):
+                pygame.display.update()
                 page = 3
                 x = 0
 
@@ -821,8 +829,8 @@ while running:
                 rect4a_button_pressed()
                 x = x + 1
 
-            if (restart_3.collidepoint(mouse_pos)):
-                buttonRestartPressed()
+            if (circle_restart_button3.collidepoint(mouse_pos)):
+                pygame.display.update()
                 page = 5
                 x = 0
 
@@ -853,8 +861,8 @@ while running:
                 rect4a_button_pressed()
                 x = x + 1
 
-            if (restart_4.collidepoint(mouse_pos)):
-                buttonRestartPressed()
+            if (circle_restart_button4.collidepoint(mouse_pos)):
+                pygame.display.update()
                 page = 7
                 x = 0
 
@@ -885,8 +893,8 @@ while running:
                 rect4a_button_pressed()
                 x = x + 1
 
-            if (restart_5.collidepoint(mouse_pos)):
-                buttonRestartPressed()
+            if (circle_restart_button5.collidepoint(mouse_pos)):
+                pygame.display.update()
                 page = 9
                 x = 0
 

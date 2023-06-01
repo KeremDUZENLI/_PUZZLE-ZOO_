@@ -25,13 +25,14 @@ rect3a_button = pygame.Rect(520, 760, 200, 200)
 rect4a_button = pygame.Rect(760, 760, 200, 200)
 
 
-restart_1 = pygame.Rect(0, 0, 0, 0)
-restart_2 = pygame.Rect(0, 0, 0, 0)
-restart_3 = pygame.Rect(0, 0, 0, 0)
-restart_4 = pygame.Rect(0, 0, 0, 0)
-restart_5 = pygame.Rect(0, 0, 0, 0)
+circle_restart_button1 = pygame.Rect(0, 0, 0, 0)
+circle_restart_button2 = pygame.Rect(0, 0, 0, 0)
+circle_restart_button3 = pygame.Rect(0, 0, 0, 0)
+circle_restart_button4 = pygame.Rect(0, 0, 0, 0)
+circle_restart_button5 = pygame.Rect(0, 0, 0, 0)
 
 
+circle_next_button0 = pygame.Rect(0, 0, 0, 0)
 circle_next_button1 = pygame.Rect(0, 0, 0, 0)
 circle_next_button2 = pygame.Rect(0, 0, 0, 0)
 circle_next_button3 = pygame.Rect(0, 0, 0, 0)
