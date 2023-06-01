@@ -111,19 +111,19 @@ def drawMiddleRectangles():
 
 def drawBottomRectangles():
     # Rectangles - Bottom
-    rect1a = pygame.draw.rect(
+    pygame.draw.rect(
         screen, (0, 0, 0), pygame.Rect(40, 760, 200, 200),  1)
     rect1a_button = pygame.Rect(40, 760, 200, 200)
 
-    rect2a = pygame.draw.rect(
+    pygame.draw.rect(
         screen, (0, 0, 0), pygame.Rect(280, 760, 200, 200), 1)
     rect2a_button = pygame.Rect(280, 760, 200, 200)
 
-    rect3a = pygame.draw.rect(
+    pygame.draw.rect(
         screen, (0, 0, 0), pygame.Rect(520, 760, 200, 200), 1)
     rect3a_button = pygame.Rect(520, 760, 200, 200)
 
-    rect4a = pygame.draw.rect(
+    pygame.draw.rect(
         screen, (0, 0, 0), pygame.Rect(760, 760, 200, 200), 1)
     rect4a_button = pygame.Rect(760, 760, 200, 200)
 
@@ -133,10 +133,25 @@ def drawLine():
     pygame.draw.line(screen, (0, 0, 0), (0, 720), (1000, 720), 3)
 
 
-def buttonRestart():
+def buttonRestart(number: int):
+    # Restart Button
     pygame.draw.circle(screen, (255, 0, 0), [900, 250], 50)
     screen.blit(img_restart, (860, 210))
-    return pygame.Rect(850, 200, 100, 100)
+
+    if number == 1:
+        restart_1 = pygame.Rect(850, 200, 100, 100)
+
+    if number == 2:
+        restart_2 = pygame.Rect(850, 200, 100, 100)
+
+    if number == 3:
+        restart_3 = pygame.Rect(850, 200, 100, 100)
+
+    if number == 4:
+        restart_4 = pygame.Rect(850, 200, 100, 100)
+
+    if number == 5:
+        restart_5 = pygame.Rect(850, 200, 100, 100)
 
 
 def buttonRestartPressed():
@@ -170,7 +185,7 @@ while running:
         drawLine()
 
         # Restart Button
-        restart_1 = buttonRestart()
+        buttonRestart(1)
 
         # Next Button - 1
         circle_next1 = pygame.draw.circle(screen, (0, 255, 0), [900, 550], 50)
@@ -280,7 +295,7 @@ while running:
         drawLine()
 
         # Restart Button
-        restart_2 = buttonRestart()
+        buttonRestart(2)
 
         # Next Button - 3
         circle_next3 = pygame.draw.circle(screen, (0, 255, 0), [900, 550], 50)
@@ -390,7 +405,7 @@ while running:
         drawLine()
 
         # Restart Button
-        restart_3 = buttonRestart()
+        buttonRestart(3)
 
         # Next Button - 5
         circle_next5 = pygame.draw.circle(screen, (0, 255, 0), [900, 550], 50)
@@ -500,7 +515,7 @@ while running:
         drawLine()
 
         # Restart Button
-        restart_4 = buttonRestart()
+        buttonRestart(4)
 
         # Next Button - 7
         circle_next7 = pygame.draw.circle(screen, (0, 255, 0), [900, 550], 50)
@@ -610,7 +625,7 @@ while running:
         drawLine()
 
         # Restart Button
-        restart_5 = buttonRestart()
+        buttonRestart(5)
 
         # Next Button - 9
         circle_next9 = pygame.draw.circle(screen, (0, 255, 0), [900, 550], 50)
