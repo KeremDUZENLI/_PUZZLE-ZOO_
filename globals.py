@@ -1,7 +1,7 @@
 import random
 from init import *
 
-x = 0
+clickAmount = 0
 page = 0
 liste = [40, 280, 520, 760]
 
@@ -26,7 +26,6 @@ circle_restart_button4 = pygame.Rect(0, 0, 0, 0)
 circle_restart_button5 = pygame.Rect(0, 0, 0, 0)
 
 
-circle_next_button0 = pygame.Rect(0, 0, 0, 0)
 circle_next_button1 = pygame.Rect(0, 0, 0, 0)
 circle_next_button2 = pygame.Rect(0, 0, 0, 0)
 circle_next_button3 = pygame.Rect(0, 0, 0, 0)
