@@ -4,7 +4,6 @@ from init import *
 page = 0
 liste = [40, 280, 520, 760]
 
-global x
 x = 0
 running = True
 

@@ -119,24 +119,25 @@ def buttonRestart(number: int):
     pygame.draw.circle(screen, (255, 0, 0), [900, 250], 50)
     screen.blit(img_restart, (860, 210))
 
+    global circle_restart_button1
+    global circle_restart_button2
+    global circle_restart_button3
+    global circle_restart_button4
+    global circle_restart_button5
+
     if number == 1:
-        global circle_restart_button1
         circle_restart_button1 = pygame.Rect(850, 200, 100, 100)
 
     if number == 2:
-        global circle_restart_button2
         circle_restart_button2 = pygame.Rect(850, 200, 100, 100)
 
     if number == 3:
-        global circle_restart_button3
         circle_restart_button3 = pygame.Rect(850, 200, 100, 100)
 
     if number == 4:
-        global circle_restart_button4
         circle_restart_button4 = pygame.Rect(850, 200, 100, 100)
 
     if number == 5:
-        global circle_restart_button5
         circle_restart_button5 = pygame.Rect(850, 200, 100, 100)
 
 
@@ -145,49 +146,51 @@ def buttonNext(number: int):
     pygame.draw.circle(screen, (0, 255, 0), [900, 550], 50)
     screen.blit(img_next, (860, 510))
 
+    global circle_next_button1
+    global circle_next_button2
+    global circle_next_button3
+    global circle_next_button4
+    global circle_next_button5
+    global circle_next_button6
+    global circle_next_button7
+    global circle_next_button8
+    global circle_next_button9
+    global circle_next_button10
+
     if number == 1:
-        global circle_next_button1
         circle_next_button1 = pygame.Rect(850, 500, 100, 100)
 
     if number == 2:
-        global circle_next_button2
         circle_next_button2 = pygame.Rect(850, 500, 100, 100)
 
     if number == 3:
-        global circle_next_button3
         circle_next_button3 = pygame.Rect(850, 500, 100, 100)
 
     if number == 4:
-        global circle_next_button4
         circle_next_button4 = pygame.Rect(850, 500, 100, 100)
 
     if number == 5:
-        global circle_next_button5
         circle_next_button5 = pygame.Rect(850, 500, 100, 100)
 
     if number == 6:
-        global circle_next_button6
         circle_next_button6 = pygame.Rect(850, 500, 100, 100)
 
     if number == 7:
-        global circle_next_button7
         circle_next_button7 = pygame.Rect(850, 500, 100, 100)
 
     if number == 8:
-        global circle_next_button8
         circle_next_button8 = pygame.Rect(850, 500, 100, 100)
 
     if number == 9:
-        global circle_next_button9
         circle_next_button9 = pygame.Rect(850, 500, 100, 100)
 
     if number == 10:
-        global circle_next_button10
         circle_next_button10 = pygame.Rect(850, 500, 100, 100)
 
 
 def pageUpdate(number: float):
     pygame.display.update()
+
     global page
     page = number
 
@@ -200,63 +203,169 @@ def rectButtonPressed(tileSprite, liste):
 
     if liste.index(40) == x:
         def rect1a_button_pressed():
-            pygame.draw.rect(screen, (0, 255, 0),
-                             pygame.Rect(40, 760, 200, 200),  1)
-
-            screenBlitListe(tileSprite, liste, 40)
-
-            pygame.display.update()
+            pictureLocationer(tileSprite, liste, 40)
 
     else:
         def rect1a_button_pressed():
-            pygame.draw.rect(screen, (255, 0, 0),
-                             pygame.Rect(40, 760, 200, 200),  1)
-            pygame.display.update()
+            pictureLocationerDefault(40)
 
     if liste.index(280) == x:
         def rect2a_button_pressed():
-            pygame.draw.rect(screen, (0, 255, 0),
-                             pygame.Rect(280, 760, 200, 200), 1)
-
-            screenBlitListe(tileSprite, liste, 280)
-
-            pygame.display.update()
+            pictureLocationer(tileSprite, liste, 280)
 
     else:
         def rect2a_button_pressed():
-            pygame.draw.rect(screen, (255, 0, 0),
-                             pygame.Rect(280, 760, 200, 200),  1)
-            pygame.display.update()
+            pictureLocationerDefault(280)
 
     if liste.index(520) == x:
         def rect3a_button_pressed():
-            pygame.draw.rect(screen, (0, 255, 0),
-                             pygame.Rect(520, 760, 200, 200), 1)
-
-            screenBlitListe(tileSprite, liste, 520)
-
-            pygame.display.update()
+            pictureLocationer(tileSprite, liste, 520)
 
     else:
         def rect3a_button_pressed():
-            pygame.draw.rect(screen, (255, 0, 0),
-                             pygame.Rect(520, 760, 200, 200),  1)
-            pygame.display.update()
+            pictureLocationerDefault(520)
 
     if liste.index(760) == x:
         def rect4a_button_pressed():
-            pygame.draw.rect(screen, (0, 255, 0),
-                             pygame.Rect(760, 760, 200, 200), 1)
-
-            screenBlitListe(tileSprite, liste, 760)
-
-            pygame.display.update()
+            pictureLocationer(tileSprite, liste, 760)
 
     else:
         def rect4a_button_pressed():
-            pygame.draw.rect(screen, (255, 0, 0),
-                             pygame.Rect(760, 760, 200, 200),  1)
-            pygame.display.update()
+            pictureLocationerDefault(760)
+
+
+def pictureLocationer(tileSprite, liste, numberInList):
+    pygame.draw.rect(screen, (0, 255, 0), pygame.Rect(
+        numberInList, 760, 200, 200),  1)
+
+    screenBlitListe(tileSprite, liste, numberInList)
+    pygame.display.update()
+
+
+def pictureLocationerDefault(numberInList):
+    pygame.draw.rect(screen, (255, 0, 0),
+                     pygame.Rect(numberInList, 760, 200, 200),  1)
+    pygame.display.update()
+
+
+def imageProvider(image):
+    # Fill the background colour to the screen
+    screen.fill((255, 255, 255))
+
+    # Image Real
+    real_img = pygame.image.load(image)
+    real_img = pygame.transform.scale(real_img, (500, 500))
+    screen.blit(real_img, (250, 250))
+
+
+def buttonRectDefinerForPage(pageNum: float):
+    global x
+
+    if (rect1a_button.collidepoint(mouse_pos)) & (page == pageNum):
+        rect1a_button_pressed()
+        x = x + 1
+
+    if (rect2a_button.collidepoint(mouse_pos)) & (page == pageNum):
+        rect2a_button_pressed()
+        x = x + 1
+
+    if (rect3a_button.collidepoint(mouse_pos)) & (page == pageNum):
+        rect3a_button_pressed()
+        x = x + 1
+
+    if (rect4a_button.collidepoint(mouse_pos)) & (page == pageNum):
+        rect4a_button_pressed()
+        x = x + 1
+
+
+def buttonCircleDefiner():
+    global page
+    global x
+
+    # -- Page 0 ----------------------------------------------------------------------
+    if (circle_next_button0.collidepoint(mouse_pos)) & (page == 0.5):
+        circle_next_button0_pressed()
+        page = 1
+
+    # -- Page 1 ----------------------------------------------------------------------
+    if (circle_restart_button1.collidepoint(mouse_pos)):
+        pygame.display.update()
+        page = 1
+        x = 0
+
+    if (circle_next_button1.collidepoint(mouse_pos)):
+        pygame.display.update()
+        page = 2
+
+    # -- Page 2 ----------------------------------------------------------------------
+    if (circle_next_button2.collidepoint(mouse_pos)):
+        pygame.display.update()
+        page = 3
+        x = 0
+
+    # -- Page 3 ----------------------------------------------------------------------
+    if (circle_restart_button2.collidepoint(mouse_pos)):
+        pygame.display.update()
+        page = 3
+        x = 0
+
+    if (circle_next_button3.collidepoint(mouse_pos)):
+        pygame.display.update()
+        page = 4
+
+    # -- Page 4 ----------------------------------------------------------------------
+    if (circle_next_button4.collidepoint(mouse_pos)):
+        pygame.display.update()
+        page = 5
+        x = 0
+
+    # -- Page 5 ----------------------------------------------------------------------
+    if (circle_restart_button3.collidepoint(mouse_pos)):
+        pygame.display.update()
+        page = 5
+        x = 0
+
+    if (circle_next_button5.collidepoint(mouse_pos)):
+        pygame.display.update()
+        page = 6
+
+    # -- Page 6 ----------------------------------------------------------------------
+    if (circle_next_button6.collidepoint(mouse_pos)):
+        pygame.display.update()
+        page = 7
+        x = 0
+
+    # -- Page 7 ----------------------------------------------------------------------
+    if (circle_restart_button4.collidepoint(mouse_pos)):
+        pygame.display.update()
+        page = 7
+        x = 0
+
+    if (circle_next_button7.collidepoint(mouse_pos)):
+        pygame.display.update()
+        page = 8
+
+    # -- Page 8 ----------------------------------------------------------------------
+    if (circle_next_button8.collidepoint(mouse_pos)):
+        pygame.display.update()
+        page = 9
+        x = 0
+
+    # -- Page 9 ----------------------------------------------------------------------
+    if (circle_restart_button5.collidepoint(mouse_pos)):
+        pygame.display.update()
+        page = 9
+        x = 0
+
+    if (circle_next_button9.collidepoint(mouse_pos)):
+        pygame.display.update()
+        page = 10
+
+    # -- Page 10 ----------------------------------------------------------------------
+    if (circle_next_button10.collidepoint(mouse_pos)):
+        pygame.display.update()
+        page = 11
+        x = 0
 
 
 # --------------------------------------------------------------------------------------------------------
@@ -297,13 +406,7 @@ while running:
         rectButtonPressed(tileSprite1, yeni_liste1)
 
     if page == 2:
-        # Fill the background colour to the screen
-        screen.fill((255, 255, 255))
-
-        # Image Real
-        real_img2 = pygame.image.load("1.png")
-        real_img2 = pygame.transform.scale(real_img2, (500, 500))
-        screen.blit(real_img2, (250, 250))
+        imageProvider("1.png")
 
         # Next Button
         buttonNext(2)
@@ -336,13 +439,7 @@ while running:
         rectButtonPressed(tileSprite3, yeni_liste3)
 
     if page == 4:
-        # Fill the background colour to the screen
-        screen.fill((255, 255, 255))
-
-        # Image Real
-        real_img4 = pygame.image.load("2.png")
-        real_img4 = pygame.transform.scale(real_img4, (500, 500))
-        screen.blit(real_img4, (250, 250))
+        imageProvider("2.png")
 
         # Next Button
         buttonNext(4)
@@ -375,13 +472,7 @@ while running:
         rectButtonPressed(tileSprite5, yeni_liste5)
 
     if page == 6:
-        # Fill the background colour to the screen
-        screen.fill((255, 255, 255))
-
-        # Image Real
-        real_img6 = pygame.image.load("3.png")
-        real_img6 = pygame.transform.scale(real_img6, (500, 500))
-        screen.blit(real_img6, (250, 250))
+        imageProvider("3.png")
 
         # Next Button
         buttonNext(6)
@@ -414,13 +505,7 @@ while running:
         rectButtonPressed(tileSprite7, yeni_liste7)
 
     if page == 8:
-        # Fill the background colour to the screen
-        screen.fill((255, 255, 255))
-
-        # Image Real
-        real_img8 = pygame.image.load("4.png")
-        real_img8 = pygame.transform.scale(real_img8, (500, 500))
-        screen.blit(real_img8, (250, 250))
+        imageProvider("4.png")
 
         # Next Button
         buttonNext(8)
@@ -453,13 +538,7 @@ while running:
         rectButtonPressed(tileSprite9, yeni_liste9)
 
     if page == 10:
-        # Fill the background colour to the screen
-        screen.fill((255, 255, 255))
-
-        # Image Real
-        real_img10 = pygame.image.load("5.png")
-        real_img10 = pygame.transform.scale(real_img10, (500, 500))
-        screen.blit(real_img10, (250, 250))
+        imageProvider("5.png")
 
         # Next Button
         buttonNext(10)
@@ -480,167 +559,31 @@ while running:
         if event.type == pygame.MOUSEBUTTONDOWN:
             mouse_pos = event.pos
 
+            buttonCircleDefiner()
+
             # -- Page 0 ----------------------------------------------------------------------
-            if (circle_next_button0.collidepoint(mouse_pos)) & (page == 0.5):
-                circle_next_button0_pressed()
-                page = 1
 
             # -- Page 1 ----------------------------------------------------------------------
-            if (rect1a_button.collidepoint(mouse_pos)) & (page == 1.5):
-                rect1a_button_pressed()
-                x = x + 1
-
-            if (rect2a_button.collidepoint(mouse_pos)) & (page == 1.5):
-                rect2a_button_pressed()
-                x = x + 1
-
-            if (rect3a_button.collidepoint(mouse_pos)) & (page == 1.5):
-                rect3a_button_pressed()
-                x = x + 1
-
-            if (rect4a_button.collidepoint(mouse_pos)) & (page == 1.5):
-                rect4a_button_pressed()
-                x = x + 1
-
-            if (circle_restart_button1.collidepoint(mouse_pos)):
-                pygame.display.update()
-                page = 1
-                x = 0
-
-            if (circle_next_button1.collidepoint(mouse_pos)):
-                pygame.display.update()
-                page = 2
+            buttonRectDefinerForPage(1.5)
 
             # -- Page 2 ----------------------------------------------------------------------
-            if (circle_next_button2.collidepoint(mouse_pos)):
-                pygame.display.update()
-                page = 3
-                x = 0
 
             # -- Page 3 ----------------------------------------------------------------------
-            if (rect1a_button.collidepoint(mouse_pos)) & (page == 3.5):
-                rect1a_button_pressed()
-                x = x + 1
-
-            if (rect2a_button.collidepoint(mouse_pos)) & (page == 3.5):
-                rect2a_button_pressed()
-                x = x + 1
-
-            if (rect3a_button.collidepoint(mouse_pos)) & (page == 3.5):
-                rect3a_button_pressed()
-                x = x + 1
-
-            if (rect4a_button.collidepoint(mouse_pos)) & (page == 3.5):
-                rect4a_button_pressed()
-                x = x + 1
-
-            if (circle_restart_button2.collidepoint(mouse_pos)):
-                pygame.display.update()
-                page = 3
-                x = 0
-
-            if (circle_next_button3.collidepoint(mouse_pos)):
-                pygame.display.update()
-                page = 4
+            buttonRectDefinerForPage(3.5)
 
             # -- Page 4 ----------------------------------------------------------------------
-            if (circle_next_button4.collidepoint(mouse_pos)):
-                pygame.display.update()
-                page = 5
-                x = 0
 
             # -- Page 5 ----------------------------------------------------------------------
-            if (rect1a_button.collidepoint(mouse_pos)) & (page == 5.5):
-                rect1a_button_pressed()
-                x = x + 1
-
-            if (rect2a_button.collidepoint(mouse_pos)) & (page == 5.5):
-                rect2a_button_pressed()
-                x = x + 1
-
-            if (rect3a_button.collidepoint(mouse_pos)) & (page == 5.5):
-                rect3a_button_pressed()
-                x = x + 1
-
-            if (rect4a_button.collidepoint(mouse_pos)) & (page == 5.5):
-                rect4a_button_pressed()
-                x = x + 1
-
-            if (circle_restart_button3.collidepoint(mouse_pos)):
-                pygame.display.update()
-                page = 5
-                x = 0
-
-            if (circle_next_button5.collidepoint(mouse_pos)):
-                pygame.display.update()
-                page = 6
+            buttonRectDefinerForPage(5.5)
 
             # -- Page 6 ----------------------------------------------------------------------
-            if (circle_next_button6.collidepoint(mouse_pos)):
-                pygame.display.update()
-                page = 7
-                x = 0
 
             # -- Page 7 ----------------------------------------------------------------------
-            if (rect1a_button.collidepoint(mouse_pos)) & (page == 7.5):
-                rect1a_button_pressed()
-                x = x + 1
-
-            if (rect2a_button.collidepoint(mouse_pos)) & (page == 7.5):
-                rect2a_button_pressed()
-                x = x + 1
-
-            if (rect3a_button.collidepoint(mouse_pos)) & (page == 7.5):
-                rect3a_button_pressed()
-                x = x + 1
-
-            if (rect4a_button.collidepoint(mouse_pos)) & (page == 7.5):
-                rect4a_button_pressed()
-                x = x + 1
-
-            if (circle_restart_button4.collidepoint(mouse_pos)):
-                pygame.display.update()
-                page = 7
-                x = 0
-
-            if (circle_next_button7.collidepoint(mouse_pos)):
-                pygame.display.update()
-                page = 8
+            buttonRectDefinerForPage(7.5)
 
             # -- Page 8 ----------------------------------------------------------------------
-            if (circle_next_button8.collidepoint(mouse_pos)):
-                pygame.display.update()
-                page = 9
-                x = 0
 
             # -- Page 9 ----------------------------------------------------------------------
-            if (rect1a_button.collidepoint(mouse_pos)) & (page == 9.5):
-                rect1a_button_pressed()
-                x = x + 1
-
-            if (rect2a_button.collidepoint(mouse_pos)) & (page == 9.5):
-                rect2a_button_pressed()
-                x = x + 1
-
-            if (rect3a_button.collidepoint(mouse_pos)) & (page == 9.5):
-                rect3a_button_pressed()
-                x = x + 1
-
-            if (rect4a_button.collidepoint(mouse_pos)) & (page == 9.5):
-                rect4a_button_pressed()
-                x = x + 1
-
-            if (circle_restart_button5.collidepoint(mouse_pos)):
-                pygame.display.update()
-                page = 9
-                x = 0
-
-            if (circle_next_button9.collidepoint(mouse_pos)):
-                pygame.display.update()
-                page = 10
+            buttonRectDefinerForPage(9.5)
 
             # -- Page 10 ----------------------------------------------------------------------
-            if (circle_next_button10.collidepoint(mouse_pos)):
-                pygame.display.update()
-                page = 11
-                x = 0
