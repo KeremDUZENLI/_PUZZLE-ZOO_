@@ -1,10 +1,10 @@
-# import the pygame module
 from re import X
 from pygame import mixer
 from pygame.locals import *
 
-from init import *
+from functions import *
 from globals import *
+from init import *
 from page1 import *
 from page3 import *
 from page5 import *
@@ -12,56 +12,29 @@ from page7 import *
 from page9 import *
 
 
-# Initializing Pygame
-
-
-# GLOBALS --------------------------------------------------------------------------------------------------------
-
-
-# PAGE 1 --------------------------------------------------
-
-
-# PAGE 3 --------------------------------------------------
-
-
-# PAGE 5 --------------------------------------------------
-
-
-# PAGE 7 --------------------------------------------------
-
-
-# PAGE 9 --------------------------------------------------
-
-
-# --------------------------------------------------------------------------------------------------------
-font_1 = pygame.font.SysFont("calibri", 50, True)
-# --------------------------------------------------------------------------------------------------------
-
-
 def page0():
-    # Fill the background colour to the screen
-    screen.fill((255, 255, 255))
+    global circle_next_button0
+    global circle_next_button0_pressed
 
-    # Image Background
+    screen.fill((255, 255, 255))
     screen.blit(img_background, (0, 0))
 
-    # Font
-    font_1 = pygame.font.SysFont("calibri", 100, True)
-    screen.blit(font_1.render("PUZZLE ZOO", True, "black"), (250, 630))
+    font_main_page = pygame.font.SysFont("calibri", 80, True)
+    screen.blit(font_main_page.render("PUZZLE ZOO", True, "black"), (250, 630))
 
-    # Start Button
     pygame.draw.circle(screen, (0, 255, 0), [500, 780], 50)
     screen.blit(img_next, (460, 740))
 
+    circle_next_button0 = pygame.Rect(450, 730, 100, 100)
+
+    def circle_next_button0_pressed():
+        pygame.display.update()
+
 
 def pageCreate(tileSprite, liste):
-    # Fill the background colour to the screen
     screen.fill((255, 255, 255))
+    screen.blit(font_default.render("PUZZLE", True, "black"), (350, 50))
 
-    # Font
-    screen.blit(font_1.render("PUZZLE", True, "black"), (350, 50))
-
-    # Image Split - 1
     screenBlit(tileSprite, liste)
 
 
@@ -87,22 +60,20 @@ def screenBlitListe(tileSprite, liste, value):
 
 
 def drawMiddleRectangles():
-    # Rectangles - Middle
     pygame.draw.rect(screen, (0, 0, 0), pygame.Rect(300, 200, 200, 200), 1)
-    screen.blit(font_1.render("1", True, (0, 0, 0)), (300, 200))
+    screen.blit(font_default.render("1", True, (0, 0, 0)), (300, 200))
 
     pygame.draw.rect(screen, (0, 0, 0), pygame.Rect(500, 200, 200, 200), 1)
-    screen.blit(font_1.render("2", True, (0, 0, 0)), (500, 200))
+    screen.blit(font_default.render("2", True, (0, 0, 0)), (500, 200))
 
     pygame.draw.rect(screen, (0, 0, 0), pygame.Rect(300, 400, 200, 200), 1)
-    screen.blit(font_1.render("3", True, (0, 0, 0)), (300, 400))
+    screen.blit(font_default.render("3", True, (0, 0, 0)), (300, 400))
 
     pygame.draw.rect(screen, (0, 0, 0), pygame.Rect(500, 400, 200, 200), 1)
-    screen.blit(font_1.render("4", True, (0, 0, 0)), (500, 400))
+    screen.blit(font_default.render("4", True, (0, 0, 0)), (500, 400))
 
 
 def drawBottomRectangles():
-    # Rectangles - Bottom
     pygame.draw.rect(screen, (0, 0, 0), pygame.Rect(40, 760, 200, 200),  1)
     pygame.draw.rect(screen, (0, 0, 0), pygame.Rect(280, 760, 200, 200), 1)
     pygame.draw.rect(screen, (0, 0, 0), pygame.Rect(520, 760, 200, 200), 1)
@@ -110,12 +81,10 @@ def drawBottomRectangles():
 
 
 def drawLine():
-    # Line
     pygame.draw.line(screen, (0, 0, 0), (0, 720), (1000, 720), 3)
 
 
 def buttonRestart(number: int):
-    # Restart Button
     pygame.draw.circle(screen, (255, 0, 0), [900, 250], 50)
     screen.blit(img_restart, (860, 210))
 
@@ -142,7 +111,6 @@ def buttonRestart(number: int):
 
 
 def buttonNext(number: int):
-    # Next Button - 1
     pygame.draw.circle(screen, (0, 255, 0), [900, 550], 50)
     screen.blit(img_next, (860, 510))
 
@@ -249,10 +217,8 @@ def pictureLocationerDefault(numberInList):
 
 
 def imageProvider(image):
-    # Fill the background colour to the screen
     screen.fill((255, 255, 255))
 
-    # Image Real
     real_img = pygame.image.load(image)
     real_img = pygame.transform.scale(real_img, (500, 500))
     screen.blit(real_img, (250, 250))
@@ -260,6 +226,11 @@ def imageProvider(image):
 
 def buttonRectDefinerForPage(pageNum: float):
     global x
+
+    rect1a_button = pygame.Rect(40, 760, 200, 200)
+    rect2a_button = pygame.Rect(280, 760, 200, 200)
+    rect3a_button = pygame.Rect(520, 760, 200, 200)
+    rect4a_button = pygame.Rect(760, 760, 200, 200)
 
     if (rect1a_button.collidepoint(mouse_pos)) & (page == pageNum):
         rect1a_button_pressed()
@@ -374,32 +345,18 @@ while running:
     # PAGES --------------------------------------------------
     if page == 0:
         page0()
-        circle_next_button0 = pygame.Rect(450, 730, 100, 100)
         pageUpdate(0.5)
-
-    # Next Button Function - 1
-    def circle_next_button0_pressed():
-        pygame.display.update()
 
     if page == 1:
         pageCreate(tileSprite1, yeni_liste1)
 
-        # Rectangles - Middle
         drawMiddleRectangles()
-
-        # Rectangles - Bottom
         drawBottomRectangles()
 
-        # Line
         drawLine()
 
-        # Restart Button
         buttonRestart(1)
-
-        # Next Button
         buttonNext(1)
-
-        # Update
         pageUpdate(1.5)
 
     if page == 1.5:
@@ -407,32 +364,19 @@ while running:
 
     if page == 2:
         imageProvider("1.png")
-
-        # Next Button
         buttonNext(2)
-
-        # Update
         pygame.display.update()
 
     if page == 3:
         pageCreate(tileSprite3, yeni_liste3)
 
-        # Rectangles - Middle
         drawMiddleRectangles()
-
-        # Rectangles - Bottom
         drawBottomRectangles()
 
-        # Line
         drawLine()
 
-        # Restart Button
         buttonRestart(2)
-
-        # Next Button
         buttonNext(3)
-
-        # Update
         pageUpdate(3.5)
 
     if page == 3.5:
@@ -440,32 +384,19 @@ while running:
 
     if page == 4:
         imageProvider("2.png")
-
-        # Next Button
         buttonNext(4)
-
-        # Update
         pygame.display.update()
 
     if page == 5:
         pageCreate(tileSprite5, yeni_liste5)
 
-        # Rectangles - Middle
         drawMiddleRectangles()
-
-        # Rectangles - Bottom
         drawBottomRectangles()
 
-        # Line
         drawLine()
 
-        # Restart Button
         buttonRestart(3)
-
-        # Next Button
         buttonNext(5)
-
-        # Update
         pageUpdate(5.5)
 
     if page == 5.5:
@@ -473,32 +404,19 @@ while running:
 
     if page == 6:
         imageProvider("3.png")
-
-        # Next Button
         buttonNext(6)
-
-        # Update
         pygame.display.update()
 
     if page == 7:
         pageCreate(tileSprite7, yeni_liste7)
 
-        # Rectangles - Middle
         drawMiddleRectangles()
-
-        # Rectangles - Bottom
         drawBottomRectangles()
 
-        # Line
         drawLine()
 
-        # Restart Button
         buttonRestart(4)
-
-        # Next Button
         buttonNext(7)
-
-        # Update
         pageUpdate(7.5)
 
     if page == 7.5:
@@ -506,32 +424,19 @@ while running:
 
     if page == 8:
         imageProvider("4.png")
-
-        # Next Button
         buttonNext(8)
-
-        # Update
         pygame.display.update()
 
     if page == 9:
         pageCreate(tileSprite9, yeni_liste9)
 
-        # Rectangles - Middle
         drawMiddleRectangles()
-
-        # Rectangles - Bottom
         drawBottomRectangles()
 
-        # Line
         drawLine()
 
-        # Restart Button
         buttonRestart(5)
-
-        # Next Button
         buttonNext(9)
-
-        # Update
         pageUpdate(9.5)
 
     if page == 9.5:
@@ -539,51 +444,21 @@ while running:
 
     if page == 10:
         imageProvider("5.png")
-
-        # Next Button
         buttonNext(10)
-
-        # Update
         pygame.display.update()
 
     # EVENTS --------------------------------------------------
-
-    # Event Queue
     for event in pygame.event.get():
 
-        # Quit
         if event.type == pygame.QUIT:
             running = False
 
-        # Mouse Activity
         if event.type == pygame.MOUSEBUTTONDOWN:
             mouse_pos = event.pos
 
             buttonCircleDefiner()
-
-            # -- Page 0 ----------------------------------------------------------------------
-
-            # -- Page 1 ----------------------------------------------------------------------
             buttonRectDefinerForPage(1.5)
-
-            # -- Page 2 ----------------------------------------------------------------------
-
-            # -- Page 3 ----------------------------------------------------------------------
             buttonRectDefinerForPage(3.5)
-
-            # -- Page 4 ----------------------------------------------------------------------
-
-            # -- Page 5 ----------------------------------------------------------------------
             buttonRectDefinerForPage(5.5)
-
-            # -- Page 6 ----------------------------------------------------------------------
-
-            # -- Page 7 ----------------------------------------------------------------------
             buttonRectDefinerForPage(7.5)
-
-            # -- Page 8 ----------------------------------------------------------------------
-
-            # -- Page 9 ----------------------------------------------------------------------
             buttonRectDefinerForPage(9.5)
-
-            # -- Page 10 ----------------------------------------------------------------------
