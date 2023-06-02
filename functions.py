@@ -31,17 +31,17 @@ def screenBlit(tileSprite, liste):
     screen.blit(tileSprite, (liste[3], 760), (200, 200, 200, 200))  # img4
 
 
-def screenBlitListe(tileSprite, liste, value):
-    if liste[0] == value:
+def screenBlitListe(liste, numberInList, tileSprite):
+    if liste[0] == numberInList:
         screen.blit(tileSprite, (300, 200), (0, 0, 200, 200))  # img1
 
-    if liste[1] == value:
+    if liste[1] == numberInList:
         screen.blit(tileSprite, (500, 200), (200, 0, 200, 200))  # img2
 
-    if liste[2] == value:
+    if liste[2] == numberInList:
         screen.blit(tileSprite, (300, 400), (0, 200, 200, 200))  # img3
 
-    if liste[3] == value:
+    if liste[3] == numberInList:
         screen.blit(tileSprite, (500, 400), (200, 200, 200, 200))  # img4
 
 
@@ -70,17 +70,16 @@ def drawLine():
     pygame.draw.line(screen, (0, 0, 0), (0, 720), (1000, 720), 3)
 
 
-def pictureLocationer(tileSprite, liste, numberInList):
-    pygame.draw.rect(screen, (0, 255, 0), pygame.Rect(
-        numberInList, 760, 200, 200),  1)
+def pictureLocationer(numberInList, liste=None, tileSprite=None):
+    if tileSprite is not None and liste is not None:
+        pygame.draw.rect(screen, (0, 255, 0), pygame.Rect(
+            numberInList, 760, 200, 200),  1)
+        screenBlitListe(liste, numberInList, tileSprite)
 
-    screenBlitListe(tileSprite, liste, numberInList)
-    pygame.display.update()
+    else:
+        pygame.draw.rect(screen, (255, 0, 0),
+                         pygame.Rect(numberInList, 760, 200, 200),  1)
 
-
-def pictureLocationerDefault(numberInList):
-    pygame.draw.rect(screen, (255, 0, 0),
-                     pygame.Rect(numberInList, 760, 200, 200),  1)
     pygame.display.update()
 
 
@@ -90,3 +89,9 @@ def imageProvider(image):
     real_img = pygame.image.load(image)
     real_img = pygame.transform.scale(real_img, (500, 500))
     screen.blit(real_img, (250, 250))
+
+
+def pageUpdate(number: float):
+    pygame.display.update()
+    page = number
+    return page

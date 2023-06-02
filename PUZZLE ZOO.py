@@ -84,53 +84,33 @@ def buttonNext(number: int):
         circle_next_button10 = pygame.Rect(850, 500, 100, 100)
 
 
-def pageUpdate(number: float):
-    pygame.display.update()
-
-    global page
-    page = number
-
-
-def rectButtonPressed(tileSprite, liste):
+def rectButtonPressed(liste, tileSprite):
     global rect1a_button_pressed
     global rect2a_button_pressed
     global rect3a_button_pressed
     global rect4a_button_pressed
 
-    if liste.index(40) == clickAmount:
-        def rect1a_button_pressed():
-            pictureLocationer(tileSprite, liste, 40)
+    def rect1a_button_pressed():
+        rectButtonPressedHelper(40, liste, tileSprite)
 
+    def rect2a_button_pressed():
+        rectButtonPressedHelper(280, liste, tileSprite)
+
+    def rect3a_button_pressed():
+        rectButtonPressedHelper(520, liste, tileSprite)
+
+    def rect4a_button_pressed():
+        rectButtonPressedHelper(760, liste, tileSprite)
+
+
+def rectButtonPressedHelper(numberInList, liste, tileSprite):
+    if liste.index(numberInList) == clickAmount:
+        pictureLocationer(numberInList, liste, tileSprite)
     else:
-        def rect1a_button_pressed():
-            pictureLocationerDefault(40)
-
-    if liste.index(280) == clickAmount:
-        def rect2a_button_pressed():
-            pictureLocationer(tileSprite, liste, 280)
-
-    else:
-        def rect2a_button_pressed():
-            pictureLocationerDefault(280)
-
-    if liste.index(520) == clickAmount:
-        def rect3a_button_pressed():
-            pictureLocationer(tileSprite, liste, 520)
-
-    else:
-        def rect3a_button_pressed():
-            pictureLocationerDefault(520)
-
-    if liste.index(760) == clickAmount:
-        def rect4a_button_pressed():
-            pictureLocationer(tileSprite, liste, 760)
-
-    else:
-        def rect4a_button_pressed():
-            pictureLocationerDefault(760)
+        pictureLocationer(numberInList)
 
 
-def buttonRectDefinerForPage(pageNum: float):
+def buttonRectDefinerForPage(pageNum: float, tileSprite=None):
     global clickAmount
 
     rect1a_button = pygame.Rect(40, 760, 200, 200)
@@ -252,7 +232,7 @@ while running:
     # PAGES --------------------------------------------------
     if page == 0:
         page0()
-        pageUpdate(0.5)
+        page = pageUpdate(0.5)
 
     if page == 1:
         pageCreate(tileSprite1, yeni_liste1)
@@ -264,10 +244,10 @@ while running:
 
         buttonRestart(1)
         buttonNext(1)
-        pageUpdate(1.5)
+        page = pageUpdate(1.5)
 
     if page == 1.5:
-        rectButtonPressed(tileSprite1, yeni_liste1)
+        rectButtonPressed(yeni_liste1, tileSprite1)
 
     if page == 2:
         imageProvider("1.png")
@@ -284,10 +264,10 @@ while running:
 
         buttonRestart(2)
         buttonNext(3)
-        pageUpdate(3.5)
+        page = pageUpdate(3.5)
 
     if page == 3.5:
-        rectButtonPressed(tileSprite3, yeni_liste3)
+        rectButtonPressed(yeni_liste3, tileSprite3)
 
     if page == 4:
         imageProvider("2.png")
@@ -304,10 +284,10 @@ while running:
 
         buttonRestart(3)
         buttonNext(5)
-        pageUpdate(5.5)
+        page = pageUpdate(5.5)
 
     if page == 5.5:
-        rectButtonPressed(tileSprite5, yeni_liste5)
+        rectButtonPressed(yeni_liste5, tileSprite5)
 
     if page == 6:
         imageProvider("3.png")
@@ -324,10 +304,10 @@ while running:
 
         buttonRestart(4)
         buttonNext(7)
-        pageUpdate(7.5)
+        page = pageUpdate(7.5)
 
     if page == 7.5:
-        rectButtonPressed(tileSprite7, yeni_liste7)
+        rectButtonPressed(yeni_liste7, tileSprite7)
 
     if page == 8:
         imageProvider("4.png")
@@ -344,10 +324,10 @@ while running:
 
         buttonRestart(5)
         buttonNext(9)
-        pageUpdate(9.5)
+        page = pageUpdate(9.5)
 
     if page == 9.5:
-        rectButtonPressed(tileSprite9, yeni_liste9)
+        rectButtonPressed(yeni_liste9, tileSprite9)
 
     if page == 10:
         imageProvider("5.png")
