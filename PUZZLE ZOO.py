@@ -90,17 +90,10 @@ def rectButtonPressed(liste, tileSprite):
     global rect3a_button_pressed
     global rect4a_button_pressed
 
-    def rect1a_button_pressed():
-        rectButtonPressedHelper(40, liste, tileSprite)
-
-    def rect2a_button_pressed():
-        rectButtonPressedHelper(280, liste, tileSprite)
-
-    def rect3a_button_pressed():
-        rectButtonPressedHelper(520, liste, tileSprite)
-
-    def rect4a_button_pressed():
-        rectButtonPressedHelper(760, liste, tileSprite)
+    def rect1a_button_pressed(): rectButtonPressedHelper(40, liste, tileSprite)
+    def rect2a_button_pressed(): rectButtonPressedHelper(280, liste, tileSprite)
+    def rect3a_button_pressed(): rectButtonPressedHelper(520, liste, tileSprite)
+    def rect4a_button_pressed(): rectButtonPressedHelper(760, liste, tileSprite)
 
 
 def rectButtonPressedHelper(numberInList, liste, tileSprite):
@@ -110,7 +103,7 @@ def rectButtonPressedHelper(numberInList, liste, tileSprite):
         pictureLocationer(numberInList)
 
 
-def buttonRectDefinerForPage(pageNum: float, tileSprite=None):
+def buttonRectDefinerForPage(pageNum: float):
     global clickAmount
 
     rect1a_button = pygame.Rect(40, 760, 200, 200)
