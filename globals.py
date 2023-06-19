@@ -25,7 +25,7 @@ circle_restart_button3 = pygame.Rect(0, 0, 0, 0)
 circle_restart_button4 = pygame.Rect(0, 0, 0, 0)
 circle_restart_button5 = pygame.Rect(0, 0, 0, 0)
 
-
+circle_next_button0 = pygame.Rect(0, 0, 0, 0)
 circle_next_button1 = pygame.Rect(0, 0, 0, 0)
 circle_next_button2 = pygame.Rect(0, 0, 0, 0)
 circle_next_button3 = pygame.Rect(0, 0, 0, 0)
