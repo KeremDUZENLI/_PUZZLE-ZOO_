@@ -234,10 +234,50 @@ def buttonRectDefinerForPage(mouse_pos, pageNum: float):
 while running:
 
     # PAGES --------------------------------------------------
+    if page == 1.5:
+        rectButtonPressed(yeni_liste1, tileSprite1)
+
+    if page == 3.5:
+        rectButtonPressed(yeni_liste3, tileSprite3)
+
+    if page == 5.5:
+        rectButtonPressed(yeni_liste5, tileSprite5)
+
+    if page == 7.5:
+        rectButtonPressed(yeni_liste7, tileSprite7)
+
+    if page == 9.5:
+        rectButtonPressed(yeni_liste9, tileSprite9)
+
     if page == 0:
         page0()
         buttonNextGeneral(0)
         page = pageUpdate(0.5)
+
+    if page == 2:
+        imageProvider("1.png")
+        buttonNextGeneral(2)
+        pygame.display.update()
+
+    if page == 4:
+        imageProvider("2.png")
+        buttonNextGeneral(4)
+        pygame.display.update()
+
+    if page == 6:
+        imageProvider("3.png")
+        buttonNextGeneral(6)
+        pygame.display.update()
+
+    if page == 8:
+        imageProvider("4.png")
+        buttonNextGeneral(8)
+        pygame.display.update()
+
+    if page == 10:
+        imageProvider("5.png")
+        buttonNextGeneral(10)
+        pygame.display.update()
 
     if page == 1:
         pageCreate(tileSprite1, yeni_liste1)
@@ -251,14 +291,6 @@ while running:
         buttonNextGeneral(1)
         page = pageUpdate(1.5)
 
-    if page == 1.5:
-        rectButtonPressed(yeni_liste1, tileSprite1)
-
-    if page == 2:
-        imageProvider("1.png")
-        buttonNextGeneral(2)
-        pygame.display.update()
-
     if page == 3:
         pageCreate(tileSprite3, yeni_liste3)
 
@@ -270,14 +302,6 @@ while running:
         buttonRestart(2)
         buttonNextGeneral(3)
         page = pageUpdate(3.5)
-
-    if page == 3.5:
-        rectButtonPressed(yeni_liste3, tileSprite3)
-
-    if page == 4:
-        imageProvider("2.png")
-        buttonNextGeneral(4)
-        pygame.display.update()
 
     if page == 5:
         pageCreate(tileSprite5, yeni_liste5)
@@ -291,14 +315,6 @@ while running:
         buttonNextGeneral(5)
         page = pageUpdate(5.5)
 
-    if page == 5.5:
-        rectButtonPressed(yeni_liste5, tileSprite5)
-
-    if page == 6:
-        imageProvider("3.png")
-        buttonNextGeneral(6)
-        pygame.display.update()
-
     if page == 7:
         pageCreate(tileSprite7, yeni_liste7)
 
@@ -311,14 +327,6 @@ while running:
         buttonNextGeneral(7)
         page = pageUpdate(7.5)
 
-    if page == 7.5:
-        rectButtonPressed(yeni_liste7, tileSprite7)
-
-    if page == 8:
-        imageProvider("4.png")
-        buttonNextGeneral(8)
-        pygame.display.update()
-
     if page == 9:
         pageCreate(tileSprite9, yeni_liste9)
 
@@ -330,14 +338,6 @@ while running:
         buttonRestart(5)
         buttonNextGeneral(9)
         page = pageUpdate(9.5)
-
-    if page == 9.5:
-        rectButtonPressed(yeni_liste9, tileSprite9)
-
-    if page == 10:
-        imageProvider("5.png")
-        buttonNextGeneral(10)
-        pygame.display.update()
 
     # EVENTS --------------------------------------------------
     for event in pygame.event.get():
