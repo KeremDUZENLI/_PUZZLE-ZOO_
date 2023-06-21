@@ -1,4 +1,7 @@
+import random
+
 from globals import *
+
 
 # PAGE_1----------------------------------------------------------------
 # Image - 1

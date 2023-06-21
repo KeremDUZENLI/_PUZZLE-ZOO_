@@ -1,11 +1,16 @@
-import random
-from init import *
+import pygame
 
-clickAmount = 0
+
+pygame.init()
+pygame.display.set_caption('PUZZLE ZOO')
+screen = pygame.display.set_mode((1000, 1000))
+
+
 page = 0
 liste = [40, 280, 520, 760]
-
 running = True
+clickAmount = 0
+
 
 font_default = pygame.font.SysFont("calibri", 50, True)
 

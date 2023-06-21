@@ -2,11 +2,10 @@ from re import X
 from pygame import mixer
 from pygame.locals import *
 
-from functions import *
-from buttons import *
-from globals import *
-from init import *
 from pages import *
+from globals import *
+from buttons import *
+from functions import *
 
 
 def buttonNextGeneral(number: int):

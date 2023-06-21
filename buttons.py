@@ -1,4 +1,3 @@
-import pygame
-from init import *
-from functions import *
+from pages import *
 from globals import *
+from functions import *
