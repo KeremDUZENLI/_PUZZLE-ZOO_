@@ -6,11 +6,7 @@ from functions import *
 from buttons import *
 from globals import *
 from init import *
-from page1 import *
-from page3 import *
-from page5 import *
-from page7 import *
-from page9 import *
+from pages import *
 
 
 def buttonNextGeneral(number: int):
