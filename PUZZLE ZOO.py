@@ -250,27 +250,27 @@ while running:
         page = pageUpdate(0.5)
 
     if page == 2:
-        imageProvider("1.png")
+        imageProvider("images/1.png")
         buttonNextGeneral(2)
         pygame.display.update()
 
     if page == 4:
-        imageProvider("2.png")
+        imageProvider("images/2.png")
         buttonNextGeneral(4)
         pygame.display.update()
 
     if page == 6:
-        imageProvider("3.png")
+        imageProvider("images/3.png")
         buttonNextGeneral(6)
         pygame.display.update()
 
     if page == 8:
-        imageProvider("4.png")
+        imageProvider("images/4.png")
         buttonNextGeneral(8)
         pygame.display.update()
 
     if page == 10:
-        imageProvider("5.png")
+        imageProvider("images/5.png")
         buttonNextGeneral(10)
         pygame.display.update()
 

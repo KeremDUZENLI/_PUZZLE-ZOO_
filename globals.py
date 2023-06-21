@@ -2,7 +2,7 @@ import pygame
 
 
 pygame.init()
-pygame.display.set_caption('PUZZLE ZOO')
+pygame.display.set_caption("PUZZLE ZOO")
 screen = pygame.display.set_mode((1000, 1000))
 
 
@@ -14,13 +14,13 @@ clickAmount = 0
 
 font_default = pygame.font.SysFont("calibri", 50, True)
 
-img_background = pygame.image.load("[Background].jpg")
+img_background = pygame.image.load("images/[Background].jpg")
 img_background = pygame.transform.scale(img_background, (1000, 1000))
 
-img_restart = pygame.image.load("[Restart].png")
+img_restart = pygame.image.load("images/[Restart].png")
 img_restart = pygame.transform.scale(img_restart, (80, 80))
 
-img_next = pygame.image.load("[Next].png")
+img_next = pygame.image.load("images/[Next].png")
 img_next = pygame.transform.scale(img_next, (80, 80))
 
 
