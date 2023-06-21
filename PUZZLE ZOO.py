@@ -1,9 +1,9 @@
-from re import X
-from pygame import mixer
-from pygame.locals import *
+# from re import X
+# from pygame import mixer
+# from pygame.locals import *
 
-from pages import *
 from globals import *
+from pages import *
 from buttons import *
 from functions import *
 
@@ -181,21 +181,21 @@ def buttonCircleDefiner(mouse_pos):
         clickAmount = 0
 
 
-def rectButtonPressed(liste, tileSprite):
+def rectButtonPressed(liste, img):
     global rect1a_button_pressed
     global rect2a_button_pressed
     global rect3a_button_pressed
     global rect4a_button_pressed
 
-    def rect1a_button_pressed(): rectButtonPressedHelper(40, liste, tileSprite)
-    def rect2a_button_pressed(): rectButtonPressedHelper(280, liste, tileSprite)
-    def rect3a_button_pressed(): rectButtonPressedHelper(520, liste, tileSprite)
-    def rect4a_button_pressed(): rectButtonPressedHelper(760, liste, tileSprite)
+    def rect1a_button_pressed(): rectButtonPressedHelper(40, liste, img)
+    def rect2a_button_pressed(): rectButtonPressedHelper(280, liste, img)
+    def rect3a_button_pressed(): rectButtonPressedHelper(520, liste, img)
+    def rect4a_button_pressed(): rectButtonPressedHelper(760, liste, img)
 
 
-def rectButtonPressedHelper(numberInList, liste, tileSprite):
+def rectButtonPressedHelper(numberInList, liste, img):
     if liste.index(numberInList) == clickAmount:
-        pictureLocationer(numberInList, liste, tileSprite)
+        pictureLocationer(numberInList, liste, img)
     else:
         pictureLocationer(numberInList)
 
@@ -230,19 +230,19 @@ while running:
 
     # PAGES --------------------------------------------------
     if page == 1.5:
-        rectButtonPressed(yeni_liste1, tileSprite1)
+        rectButtonPressed(yeni_liste1, img1)
 
     if page == 3.5:
-        rectButtonPressed(yeni_liste3, tileSprite3)
+        rectButtonPressed(yeni_liste2, img2)
 
     if page == 5.5:
-        rectButtonPressed(yeni_liste5, tileSprite5)
+        rectButtonPressed(yeni_liste3, img3)
 
     if page == 7.5:
-        rectButtonPressed(yeni_liste7, tileSprite7)
+        rectButtonPressed(yeni_liste4, img4)
 
     if page == 9.5:
-        rectButtonPressed(yeni_liste9, tileSprite9)
+        rectButtonPressed(yeni_liste5, img5)
 
     if page == 0:
         page0()
@@ -275,7 +275,7 @@ while running:
         pygame.display.update()
 
     if page == 1:
-        pageCreate(tileSprite1, yeni_liste1)
+        pageCreate(img1, yeni_liste1)
 
         drawMiddleRectangles()
         drawBottomRectangles()
@@ -287,7 +287,7 @@ while running:
         page = pageUpdate(1.5)
 
     if page == 3:
-        pageCreate(tileSprite3, yeni_liste3)
+        pageCreate(img2, yeni_liste2)
 
         drawMiddleRectangles()
         drawBottomRectangles()
@@ -299,7 +299,7 @@ while running:
         page = pageUpdate(3.5)
 
     if page == 5:
-        pageCreate(tileSprite5, yeni_liste5)
+        pageCreate(img3, yeni_liste3)
 
         drawMiddleRectangles()
         drawBottomRectangles()
@@ -311,7 +311,7 @@ while running:
         page = pageUpdate(5.5)
 
     if page == 7:
-        pageCreate(tileSprite7, yeni_liste7)
+        pageCreate(img4, yeni_liste4)
 
         drawMiddleRectangles()
         drawBottomRectangles()
@@ -323,7 +323,7 @@ while running:
         page = pageUpdate(7.5)
 
     if page == 9:
-        pageCreate(tileSprite9, yeni_liste9)
+        pageCreate(img5, yeni_liste5)
 
         drawMiddleRectangles()
         drawBottomRectangles()

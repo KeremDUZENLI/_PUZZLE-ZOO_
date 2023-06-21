@@ -1,93 +1,70 @@
-import random
-
 from globals import *
 
 
-# PAGE_1----------------------------------------------------------------
-# Image - 1
-img1 = pygame.image.load("images/1.png")
-img1 = pygame.transform.scale(img1, (400, 400))
+def drawMiddleRectangles():
+    pygame.draw.rect(screen, (0, 0, 0), pygame.Rect(300, 200, 200, 200), 1)
+    screen.blit(font_default.render("1", True, (0, 0, 0)), (300, 200))
 
-# Image Split - 1
-tileSprite1 = pygame.image.load("images/1.png")
-tileSprite1 = pygame.transform.scale(img1, (400, 400))
+    pygame.draw.rect(screen, (0, 0, 0), pygame.Rect(500, 200, 200, 200), 1)
+    screen.blit(font_default.render("2", True, (0, 0, 0)), (500, 200))
 
-yeni_liste1 = []
+    pygame.draw.rect(screen, (0, 0, 0), pygame.Rect(300, 400, 200, 200), 1)
+    screen.blit(font_default.render("3", True, (0, 0, 0)), (300, 400))
 
-for i in range(100):
-    r = random.choice(liste)
-
-    if r not in yeni_liste1:
-        yeni_liste1.append(r)
+    pygame.draw.rect(screen, (0, 0, 0), pygame.Rect(500, 400, 200, 200), 1)
+    screen.blit(font_default.render("4", True, (0, 0, 0)), (500, 400))
 
 
-# PAGE_3----------------------------------------------------------------
-# Image - 3
-img3 = pygame.image.load("images/2.png")
-img3 = pygame.transform.scale(img3, (400, 400))
-
-# Image Split - 3
-tileSprite3 = pygame.image.load("images/2.png")
-tileSprite3 = pygame.transform.scale(img3, (400, 400))
-
-yeni_liste3 = []
-
-for i in range(100):
-    r = random.choice(liste)
-
-    if r not in yeni_liste3:
-        yeni_liste3.append(r)
+def drawBottomRectangles():
+    pygame.draw.rect(screen, (0, 0, 0), pygame.Rect(40, 760, 200, 200),  1)
+    pygame.draw.rect(screen, (0, 0, 0), pygame.Rect(280, 760, 200, 200), 1)
+    pygame.draw.rect(screen, (0, 0, 0), pygame.Rect(520, 760, 200, 200), 1)
+    pygame.draw.rect(screen, (0, 0, 0), pygame.Rect(760, 760, 200, 200), 1)
 
 
-# PAGE_5----------------------------------------------------------------
-# Image - 5
-img5 = pygame.image.load("images/3.png")
-img5 = pygame.transform.scale(img5, (400, 400))
-
-# Image Split - 5
-tileSprite5 = pygame.image.load("images/3.png")
-tileSprite5 = pygame.transform.scale(img5, (400, 400))
-
-yeni_liste5 = []
-
-for i in range(100):
-    r = random.choice(liste)
-
-    if r not in yeni_liste5:
-        yeni_liste5.append(r)
+def drawLine():
+    pygame.draw.line(screen, (0, 0, 0), (0, 720), (1000, 720), 3)
 
 
-# PAGE_7----------------------------------------------------------------
-# Image - 7
-img7 = pygame.image.load("images/4.png")
-img7 = pygame.transform.scale(img7, (400, 400))
+def imageProvider(image):
+    screen.fill((255, 255, 255))
 
-# Image Split - 7
-tileSprite7 = pygame.image.load("images/4.png")
-tileSprite7 = pygame.transform.scale(img7, (400, 400))
-
-yeni_liste7 = []
-
-for i in range(100):
-    r = random.choice(liste)
-
-    if r not in yeni_liste7:
-        yeni_liste7.append(r)
+    real_img = pygame.image.load(image)
+    real_img = pygame.transform.scale(real_img, (500, 500))
+    screen.blit(real_img, (250, 250))
 
 
-# PAGE_9----------------------------------------------------------------
-# Image - 9
-img9 = pygame.image.load("images/5.png")
-img9 = pygame.transform.scale(img9, (400, 400))
+def pageUpdate(number: float):
+    pygame.display.update()
+    page = number
+    return page
 
-# Image Split - 9
-tileSprite9 = pygame.image.load("images/5.png")
-tileSprite9 = pygame.transform.scale(img9, (400, 400))
 
-yeni_liste9 = []
+def imageLoader(path: str):
+    img = pygame.image.load(path)
+    return pygame.transform.scale(img, (400, 400))
 
-for i in range(100):
-    r = random.choice(liste)
 
-    if r not in yeni_liste9:
-        yeni_liste9.append(r)
+def listMixer():
+    yeni_liste = []
+    for _ in range(100):
+        r = random.choice(liste)
+
+        if r not in yeni_liste:
+            yeni_liste.append(r)
+
+    return yeni_liste
+
+
+img1 = imageLoader("images/1.png")
+img2 = imageLoader("images/2.png")
+img3 = imageLoader("images/3.png")
+img4 = imageLoader("images/4.png")
+img5 = imageLoader("images/5.png")
+
+
+yeni_liste1 = listMixer()
+yeni_liste2 = listMixer()
+yeni_liste3 = listMixer()
+yeni_liste4 = listMixer()
+yeni_liste5 = listMixer()
