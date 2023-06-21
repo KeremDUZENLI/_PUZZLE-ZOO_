@@ -1,67 +1,7 @@
-# from re import X
-# from pygame import mixer
-# from pygame.locals import *
-
 from globals import *
 from pages import *
 from buttons import *
 from functions import *
-
-
-def buttonNextGeneral(number: int):
-    global circle_next_button0
-
-    if number == 0:
-        circle_next_button0 = pygame.Rect(450, 730, 100, 100)
-
-    else:
-        buttonNext(number)
-
-
-def buttonNext(number: int):
-    pygame.draw.circle(screen, (0, 255, 0), [900, 550], 50)
-    screen.blit(img_next, (860, 510))
-
-    global circle_next_button1
-    global circle_next_button2
-    global circle_next_button3
-    global circle_next_button4
-    global circle_next_button5
-    global circle_next_button6
-    global circle_next_button7
-    global circle_next_button8
-    global circle_next_button9
-    global circle_next_button10
-
-    if number == 1:
-        circle_next_button1 = pygame.Rect(850, 500, 100, 100)
-
-    if number == 2:
-        circle_next_button2 = pygame.Rect(850, 500, 100, 100)
-
-    if number == 3:
-        circle_next_button3 = pygame.Rect(850, 500, 100, 100)
-
-    if number == 4:
-        circle_next_button4 = pygame.Rect(850, 500, 100, 100)
-
-    if number == 5:
-        circle_next_button5 = pygame.Rect(850, 500, 100, 100)
-
-    if number == 6:
-        circle_next_button6 = pygame.Rect(850, 500, 100, 100)
-
-    if number == 7:
-        circle_next_button7 = pygame.Rect(850, 500, 100, 100)
-
-    if number == 8:
-        circle_next_button8 = pygame.Rect(850, 500, 100, 100)
-
-    if number == 9:
-        circle_next_button9 = pygame.Rect(850, 500, 100, 100)
-
-    if number == 10:
-        circle_next_button10 = pygame.Rect(850, 500, 100, 100)
 
 
 def buttonRestart(number: int):
@@ -246,32 +186,32 @@ while running:
 
     if page == 0:
         page0()
-        buttonNextGeneral(0)
+        circle_next_button0 = buttonNextGeneral(0)
         page = pageUpdate(0.5)
 
     if page == 2:
         imageProvider("images/1.png")
-        buttonNextGeneral(2)
+        circle_next_button2 = buttonNextGeneral(2)
         pygame.display.update()
 
     if page == 4:
         imageProvider("images/2.png")
-        buttonNextGeneral(4)
+        circle_next_button4 = buttonNextGeneral(4)
         pygame.display.update()
 
     if page == 6:
         imageProvider("images/3.png")
-        buttonNextGeneral(6)
+        circle_next_button6 = buttonNextGeneral(6)
         pygame.display.update()
 
     if page == 8:
         imageProvider("images/4.png")
-        buttonNextGeneral(8)
+        circle_next_button8 = buttonNextGeneral(8)
         pygame.display.update()
 
     if page == 10:
         imageProvider("images/5.png")
-        buttonNextGeneral(10)
+        circle_next_button10 = buttonNextGeneral(10)
         pygame.display.update()
 
     if page == 1:
@@ -283,7 +223,7 @@ while running:
         drawLine()
 
         buttonRestart(1)
-        buttonNextGeneral(1)
+        circle_next_button1 = buttonNextGeneral(1)
         page = pageUpdate(1.5)
 
     if page == 3:
@@ -295,7 +235,7 @@ while running:
         drawLine()
 
         buttonRestart(2)
-        buttonNextGeneral(3)
+        circle_next_button3 = buttonNextGeneral(3)
         page = pageUpdate(3.5)
 
     if page == 5:
@@ -307,7 +247,7 @@ while running:
         drawLine()
 
         buttonRestart(3)
-        buttonNextGeneral(5)
+        circle_next_button5 = buttonNextGeneral(5)
         page = pageUpdate(5.5)
 
     if page == 7:
@@ -319,7 +259,7 @@ while running:
         drawLine()
 
         buttonRestart(4)
-        buttonNextGeneral(7)
+        circle_next_button7 = buttonNextGeneral(7)
         page = pageUpdate(7.5)
 
     if page == 9:
@@ -331,7 +271,7 @@ while running:
         drawLine()
 
         buttonRestart(5)
-        buttonNextGeneral(9)
+        circle_next_button9 = buttonNextGeneral(9)
         page = pageUpdate(9.5)
 
     # EVENTS --------------------------------------------------
