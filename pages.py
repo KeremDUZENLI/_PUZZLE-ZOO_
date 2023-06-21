@@ -17,8 +17,6 @@ for i in range(100):
     if r not in yeni_liste1:
         yeni_liste1.append(r)
 
-print(yeni_liste1)
-
 
 # PAGE_3----------------------------------------------------------------
 # Image - 3
@@ -36,8 +34,6 @@ for i in range(100):
 
     if r not in yeni_liste3:
         yeni_liste3.append(r)
-
-print(yeni_liste3)
 
 
 # PAGE_5----------------------------------------------------------------
@@ -57,8 +53,6 @@ for i in range(100):
     if r not in yeni_liste5:
         yeni_liste5.append(r)
 
-print(yeni_liste5)
-
 
 # PAGE_7----------------------------------------------------------------
 # Image - 7
@@ -77,8 +71,6 @@ for i in range(100):
     if r not in yeni_liste7:
         yeni_liste7.append(r)
 
-print(yeni_liste7)
-
 
 # PAGE_9----------------------------------------------------------------
 # Image - 9
@@ -96,5 +88,3 @@ for i in range(100):
 
     if r not in yeni_liste9:
         yeni_liste9.append(r)
-
-print(yeni_liste9)
