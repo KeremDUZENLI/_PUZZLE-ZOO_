@@ -4,32 +4,6 @@ from buttons import *
 from functions import *
 
 
-def buttonRestart(number: int):
-    pygame.draw.circle(screen, (255, 0, 0), [900, 250], 50)
-    screen.blit(img_restart, (860, 210))
-
-    global circle_restart_button1
-    global circle_restart_button2
-    global circle_restart_button3
-    global circle_restart_button4
-    global circle_restart_button5
-
-    if number == 1:
-        circle_restart_button1 = pygame.Rect(850, 200, 100, 100)
-
-    if number == 2:
-        circle_restart_button2 = pygame.Rect(850, 200, 100, 100)
-
-    if number == 3:
-        circle_restart_button3 = pygame.Rect(850, 200, 100, 100)
-
-    if number == 4:
-        circle_restart_button4 = pygame.Rect(850, 200, 100, 100)
-
-    if number == 5:
-        circle_restart_button5 = pygame.Rect(850, 200, 100, 100)
-
-
 def buttonCircleDefiner(mouse_pos):
     global page
     global clickAmount
@@ -150,19 +124,19 @@ def buttonRectDefinerForPage(mouse_pos, pageNum: float):
 
     if (rect1a_button.collidepoint(mouse_pos)) & (page == pageNum):
         rect1a_button_pressed()
-        clickAmount = clickAmount + 1
+        clickAmount += 1
 
     if (rect2a_button.collidepoint(mouse_pos)) & (page == pageNum):
         rect2a_button_pressed()
-        clickAmount = clickAmount + 1
+        clickAmount += 1
 
     if (rect3a_button.collidepoint(mouse_pos)) & (page == pageNum):
         rect3a_button_pressed()
-        clickAmount = clickAmount + 1
+        clickAmount += 1
 
     if (rect4a_button.collidepoint(mouse_pos)) & (page == pageNum):
         rect4a_button_pressed()
-        clickAmount = clickAmount + 1
+        clickAmount += 1
 
 
 # --------------------------------------------------------------------------------------------------------
@@ -222,7 +196,7 @@ while running:
 
         drawLine()
 
-        buttonRestart(1)
+        circle_restart_button1 = buttonRestart(1)
         circle_next_button1 = buttonNextGeneral(1)
         page = pageUpdate(1.5)
 
@@ -234,7 +208,7 @@ while running:
 
         drawLine()
 
-        buttonRestart(2)
+        circle_restart_button2 = buttonRestart(2)
         circle_next_button3 = buttonNextGeneral(3)
         page = pageUpdate(3.5)
 
@@ -246,7 +220,7 @@ while running:
 
         drawLine()
 
-        buttonRestart(3)
+        circle_restart_button3 = buttonRestart(3)
         circle_next_button5 = buttonNextGeneral(5)
         page = pageUpdate(5.5)
 
@@ -258,7 +232,7 @@ while running:
 
         drawLine()
 
-        buttonRestart(4)
+        circle_restart_button4 = buttonRestart(4)
         circle_next_button7 = buttonNextGeneral(7)
         page = pageUpdate(7.5)
 
@@ -270,7 +244,7 @@ while running:
 
         drawLine()
 
-        buttonRestart(5)
+        circle_restart_button5 = buttonRestart(5)
         circle_next_button9 = buttonNextGeneral(9)
         page = pageUpdate(9.5)
 
