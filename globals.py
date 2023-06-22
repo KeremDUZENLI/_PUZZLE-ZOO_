@@ -26,10 +26,10 @@ img_next = pygame.transform.scale(img_next, (80, 80))
 
 
 circle_restart_button1 = pygame.Rect(0, 0, 0, 0)
-circle_restart_button2 = pygame.Rect(0, 0, 0, 0)
 circle_restart_button3 = pygame.Rect(0, 0, 0, 0)
-circle_restart_button4 = pygame.Rect(0, 0, 0, 0)
 circle_restart_button5 = pygame.Rect(0, 0, 0, 0)
+circle_restart_button7 = pygame.Rect(0, 0, 0, 0)
+circle_restart_button9 = pygame.Rect(0, 0, 0, 0)
 
 circle_next_button0 = pygame.Rect(0, 0, 0, 0)
 circle_next_button1 = pygame.Rect(0, 0, 0, 0)

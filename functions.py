@@ -1,17 +1,6 @@
 from globals import *
 
 
-def page0():
-    screen.fill((255, 255, 255))
-    screen.blit(img_background, (0, 0))
-
-    font_main_page = pygame.font.SysFont("calibri", 80, True)
-    screen.blit(font_main_page.render("PUZZLE ZOO", True, "black"), (250, 630))
-
-    pygame.draw.circle(screen, (0, 255, 0), [500, 780], 50)
-    screen.blit(img_next, (460, 740))
-
-
 def pageCreate(img, liste):
     screen.fill((255, 255, 255))
     screen.blit(font_default.render("PUZZLE", True, "black"), (350, 50))

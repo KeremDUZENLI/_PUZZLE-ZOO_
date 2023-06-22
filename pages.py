@@ -1,6 +1,12 @@
 from globals import *
 
 
+def draw():
+    drawMiddleRectangles()
+    drawBottomRectangles()
+    drawLine()
+
+
 def drawMiddleRectangles():
     pygame.draw.rect(screen, (0, 0, 0), pygame.Rect(300, 200, 200, 200), 1)
     screen.blit(font_default.render("1", True, (0, 0, 0)), (300, 200))
@@ -24,6 +30,17 @@ def drawBottomRectangles():
 
 def drawLine():
     pygame.draw.line(screen, (0, 0, 0), (0, 720), (1000, 720), 3)
+
+
+def page0():
+    screen.fill((255, 255, 255))
+    screen.blit(img_background, (0, 0))
+
+    font_main_page = pygame.font.SysFont("calibri", 80, True)
+    screen.blit(font_main_page.render("PUZZLE ZOO", True, "black"), (250, 630))
+
+    pygame.draw.circle(screen, (0, 255, 0), [500, 780], 50)
+    screen.blit(img_next, (460, 740))
 
 
 def imageProvider(image):
@@ -61,7 +78,6 @@ img2 = imageLoader("images/2.png")
 img3 = imageLoader("images/3.png")
 img4 = imageLoader("images/4.png")
 img5 = imageLoader("images/5.png")
-
 
 yeni_liste1 = listMixer()
 yeni_liste2 = listMixer()

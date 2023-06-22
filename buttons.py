@@ -10,20 +10,20 @@ def buttonRestart(number: int):
         return circle_restart_button1
 
     if number == 2:
-        circle_restart_button2 = pygame.Rect(850, 200, 100, 100)
-        return circle_restart_button2
-
-    if number == 3:
         circle_restart_button3 = pygame.Rect(850, 200, 100, 100)
         return circle_restart_button3
 
-    if number == 4:
-        circle_restart_button4 = pygame.Rect(850, 200, 100, 100)
-        return circle_restart_button4
-
-    if number == 5:
+    if number == 3:
         circle_restart_button5 = pygame.Rect(850, 200, 100, 100)
         return circle_restart_button5
+
+    if number == 4:
+        circle_restart_button7 = pygame.Rect(850, 200, 100, 100)
+        return circle_restart_button7
+
+    if number == 5:
+        circle_restart_button9 = pygame.Rect(850, 200, 100, 100)
+        return circle_restart_button9
 
 
 def buttonNextGeneral(number: int):

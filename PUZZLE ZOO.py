@@ -4,95 +4,22 @@ from buttons import *
 from functions import *
 
 
-def buttonCircleDefiner(mouse_pos):
-    global page
-    global clickAmount
+# Pages With Images--------------------------------------------------------------------------------------------------------
+def pagesWithImagesSplit():
+    if page == 1.5:
+        rectButtonPressed(yeni_liste1, img1)
 
-    # -- Page 0 ----------------------------------------------------------------------
-    if (circle_next_button0.collidepoint(mouse_pos)):
-        pygame.display.update()
-        page = 1
-        clickAmount = 0
+    if page == 3.5:
+        rectButtonPressed(yeni_liste2, img2)
 
-    # -- Page 1 ----------------------------------------------------------------------
-    if (circle_restart_button1.collidepoint(mouse_pos)):
-        pygame.display.update()
-        page = 1
-        clickAmount = 0
+    if page == 5.5:
+        rectButtonPressed(yeni_liste3, img3)
 
-    if (circle_next_button1.collidepoint(mouse_pos)):
-        pygame.display.update()
-        page = 2
+    if page == 7.5:
+        rectButtonPressed(yeni_liste4, img4)
 
-    # -- Page 2 ----------------------------------------------------------------------
-    if (circle_next_button2.collidepoint(mouse_pos)):
-        pygame.display.update()
-        page = 3
-        clickAmount = 0
-
-    # -- Page 3 ----------------------------------------------------------------------
-    if (circle_restart_button2.collidepoint(mouse_pos)):
-        pygame.display.update()
-        page = 3
-        clickAmount = 0
-
-    if (circle_next_button3.collidepoint(mouse_pos)):
-        pygame.display.update()
-        page = 4
-
-    # -- Page 4 ----------------------------------------------------------------------
-    if (circle_next_button4.collidepoint(mouse_pos)):
-        pygame.display.update()
-        page = 5
-        clickAmount = 0
-
-    # -- Page 5 ----------------------------------------------------------------------
-    if (circle_restart_button3.collidepoint(mouse_pos)):
-        pygame.display.update()
-        page = 5
-        clickAmount = 0
-
-    if (circle_next_button5.collidepoint(mouse_pos)):
-        pygame.display.update()
-        page = 6
-
-    # -- Page 6 ----------------------------------------------------------------------
-    if (circle_next_button6.collidepoint(mouse_pos)):
-        pygame.display.update()
-        page = 7
-        clickAmount = 0
-
-    # -- Page 7 ----------------------------------------------------------------------
-    if (circle_restart_button4.collidepoint(mouse_pos)):
-        pygame.display.update()
-        page = 7
-        clickAmount = 0
-
-    if (circle_next_button7.collidepoint(mouse_pos)):
-        pygame.display.update()
-        page = 8
-
-    # -- Page 8 ----------------------------------------------------------------------
-    if (circle_next_button8.collidepoint(mouse_pos)):
-        pygame.display.update()
-        page = 9
-        clickAmount = 0
-
-    # -- Page 9 ----------------------------------------------------------------------
-    if (circle_restart_button5.collidepoint(mouse_pos)):
-        pygame.display.update()
-        page = 9
-        clickAmount = 0
-
-    if (circle_next_button9.collidepoint(mouse_pos)):
-        pygame.display.update()
-        page = 10
-
-    # -- Page 10 ----------------------------------------------------------------------
-    if (circle_next_button10.collidepoint(mouse_pos)):
-        pygame.display.update()
-        page = 11
-        clickAmount = 0
+    if page == 9.5:
+        rectButtonPressed(yeni_liste5, img5)
 
 
 def rectButtonPressed(liste, img):
@@ -112,6 +39,87 @@ def rectButtonPressedHelper(numberInList, liste, img):
         pictureLocationer(numberInList, liste, img)
     else:
         pictureLocationer(numberInList)
+
+
+# Button Definers In While Loop--------------------------------------------------------------------------------------------------------
+def buttonCircleDefiner(mouse_pos):
+    global page
+    global clickAmount
+
+    if (circle_restart_button1.collidepoint(mouse_pos)):
+        pygame.display.update()
+        page = 1
+        clickAmount = 0
+
+    if (circle_restart_button3.collidepoint(mouse_pos)):
+        pygame.display.update()
+        page = 3
+        clickAmount = 0
+
+    if (circle_restart_button5.collidepoint(mouse_pos)):
+        pygame.display.update()
+        page = 5
+        clickAmount = 0
+
+    if (circle_restart_button7.collidepoint(mouse_pos)):
+        pygame.display.update()
+        page = 7
+        clickAmount = 0
+
+    if (circle_restart_button9.collidepoint(mouse_pos)):
+        pygame.display.update()
+        page = 9
+        clickAmount = 0
+
+    if (circle_next_button0.collidepoint(mouse_pos)):
+        pygame.display.update()
+        page = 1
+        clickAmount = 0
+
+    if (circle_next_button1.collidepoint(mouse_pos)):
+        pygame.display.update()
+        page = 2
+
+    if (circle_next_button2.collidepoint(mouse_pos)):
+        pygame.display.update()
+        page = 3
+        clickAmount = 0
+
+    if (circle_next_button3.collidepoint(mouse_pos)):
+        pygame.display.update()
+        page = 4
+
+    if (circle_next_button4.collidepoint(mouse_pos)):
+        pygame.display.update()
+        page = 5
+        clickAmount = 0
+
+    if (circle_next_button5.collidepoint(mouse_pos)):
+        pygame.display.update()
+        page = 6
+
+    if (circle_next_button6.collidepoint(mouse_pos)):
+        pygame.display.update()
+        page = 7
+        clickAmount = 0
+
+    if (circle_next_button7.collidepoint(mouse_pos)):
+        pygame.display.update()
+        page = 8
+
+    if (circle_next_button8.collidepoint(mouse_pos)):
+        pygame.display.update()
+        page = 9
+        clickAmount = 0
+
+    if (circle_next_button9.collidepoint(mouse_pos)):
+        pygame.display.update()
+        page = 10
+
+    if (circle_next_button10.collidepoint(mouse_pos)):
+        pygame.display.update()
+        page = 11
+        clickAmount = 0
 
 
 def buttonRectDefinerForPage(mouse_pos, pageNum: float):
@@ -139,29 +147,16 @@ def buttonRectDefinerForPage(mouse_pos, pageNum: float):
         clickAmount += 1
 
 
-# --------------------------------------------------------------------------------------------------------
+# MAIN--------------------------------------------------------------------------------------------------------
 while running:
 
     # PAGES --------------------------------------------------
-    if page == 1.5:
-        rectButtonPressed(yeni_liste1, img1)
-
-    if page == 3.5:
-        rectButtonPressed(yeni_liste2, img2)
-
-    if page == 5.5:
-        rectButtonPressed(yeni_liste3, img3)
-
-    if page == 7.5:
-        rectButtonPressed(yeni_liste4, img4)
-
-    if page == 9.5:
-        rectButtonPressed(yeni_liste5, img5)
+    pagesWithImagesSplit()
 
     if page == 0:
         page0()
         circle_next_button0 = buttonNextGeneral(0)
-        page = pageUpdate(0.5)
+        pygame.display.update()
 
     if page == 2:
         imageProvider("images/1.png")
@@ -190,11 +185,7 @@ while running:
 
     if page == 1:
         pageCreate(img1, yeni_liste1)
-
-        drawMiddleRectangles()
-        drawBottomRectangles()
-
-        drawLine()
+        draw()
 
         circle_restart_button1 = buttonRestart(1)
         circle_next_button1 = buttonNextGeneral(1)
@@ -202,49 +193,33 @@ while running:
 
     if page == 3:
         pageCreate(img2, yeni_liste2)
+        draw()
 
-        drawMiddleRectangles()
-        drawBottomRectangles()
-
-        drawLine()
-
-        circle_restart_button2 = buttonRestart(2)
+        circle_restart_button3 = buttonRestart(2)
         circle_next_button3 = buttonNextGeneral(3)
         page = pageUpdate(3.5)
 
     if page == 5:
         pageCreate(img3, yeni_liste3)
+        draw()
 
-        drawMiddleRectangles()
-        drawBottomRectangles()
-
-        drawLine()
-
-        circle_restart_button3 = buttonRestart(3)
+        circle_restart_button5 = buttonRestart(3)
         circle_next_button5 = buttonNextGeneral(5)
         page = pageUpdate(5.5)
 
     if page == 7:
         pageCreate(img4, yeni_liste4)
+        draw()
 
-        drawMiddleRectangles()
-        drawBottomRectangles()
-
-        drawLine()
-
-        circle_restart_button4 = buttonRestart(4)
+        circle_restart_button7 = buttonRestart(4)
         circle_next_button7 = buttonNextGeneral(7)
         page = pageUpdate(7.5)
 
     if page == 9:
         pageCreate(img5, yeni_liste5)
+        draw()
 
-        drawMiddleRectangles()
-        drawBottomRectangles()
-
-        drawLine()
-
-        circle_restart_button5 = buttonRestart(5)
+        circle_restart_button9 = buttonRestart(5)
         circle_next_button9 = buttonNextGeneral(9)
         page = pageUpdate(9.5)
 
