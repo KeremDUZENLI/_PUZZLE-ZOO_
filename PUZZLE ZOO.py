@@ -91,23 +91,24 @@ def buttonCircleDefinerNext(mouse_pos):
 
 
 def buttonRectDefinerForPage(mouse_pos, pageNum: float):
+    global page
     global clickAmount
-    xliste, img = pageDefiner(pageNum)
+    yeni_liste, img = pageDefiner(pageNum)
 
     if (rect1a_button.collidepoint(mouse_pos)) & (page == pageNum):
-        rectButtonPressedHelper(40, xliste, img)
+        rectButtonPressedHelper(40, yeni_liste, img)
         clickAmount += 1
 
     if (rect2a_button.collidepoint(mouse_pos)) & (page == pageNum):
-        rectButtonPressedHelper(280, xliste, img)
+        rectButtonPressedHelper(280, yeni_liste, img)
         clickAmount += 1
 
     if (rect3a_button.collidepoint(mouse_pos)) & (page == pageNum):
-        rectButtonPressedHelper(520, xliste, img)
+        rectButtonPressedHelper(520, yeni_liste, img)
         clickAmount += 1
 
     if (rect4a_button.collidepoint(mouse_pos)) & (page == pageNum):
-        rectButtonPressedHelper(760, xliste, img)
+        rectButtonPressedHelper(760, yeni_liste, img)
         clickAmount += 1
 
 
