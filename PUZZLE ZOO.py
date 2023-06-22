@@ -42,7 +42,7 @@ def rectButtonPressedHelper(numberInList, liste, img):
 
 
 # Button Definers In While Loop--------------------------------------------------------------------------------------------------------
-def buttonCircleDefiner(mouse_pos):
+def buttonCircleDefinerRestart(mouse_pos):
     global page
     global clickAmount
 
@@ -70,6 +70,11 @@ def buttonCircleDefiner(mouse_pos):
         pygame.display.update()
         page = 9
         clickAmount = 0
+
+
+def buttonCircleDefinerNext(mouse_pos):
+    global page
+    global clickAmount
 
     if (circle_next_button0.collidepoint(mouse_pos)):
         pygame.display.update()
@@ -232,7 +237,9 @@ while running:
         if event.type == pygame.MOUSEBUTTONDOWN:
             mouse_pos = event.pos
 
-            buttonCircleDefiner(mouse_pos)
+            buttonCircleDefinerRestart(mouse_pos)
+            buttonCircleDefinerNext(mouse_pos)
+
             buttonRectDefinerForPage(mouse_pos, 1.5)
             buttonRectDefinerForPage(mouse_pos, 3.5)
             buttonRectDefinerForPage(mouse_pos, 5.5)
