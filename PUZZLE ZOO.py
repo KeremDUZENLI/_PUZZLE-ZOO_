@@ -4,43 +4,6 @@ from buttons import *
 from functions import *
 
 
-# Pages With Images--------------------------------------------------------------------------------------------------------
-def pagesWithImagesSplit():
-    if page == 1.5:
-        rectButtonPressed(yeni_liste1, img1)
-
-    if page == 3.5:
-        rectButtonPressed(yeni_liste2, img2)
-
-    if page == 5.5:
-        rectButtonPressed(yeni_liste3, img3)
-
-    if page == 7.5:
-        rectButtonPressed(yeni_liste4, img4)
-
-    if page == 9.5:
-        rectButtonPressed(yeni_liste5, img5)
-
-
-def rectButtonPressed(liste, img):
-    global rect1a_button_pressed
-    global rect2a_button_pressed
-    global rect3a_button_pressed
-    global rect4a_button_pressed
-
-    def rect1a_button_pressed(): rectButtonPressedHelper(40, liste, img)
-    def rect2a_button_pressed(): rectButtonPressedHelper(280, liste, img)
-    def rect3a_button_pressed(): rectButtonPressedHelper(520, liste, img)
-    def rect4a_button_pressed(): rectButtonPressedHelper(760, liste, img)
-
-
-def rectButtonPressedHelper(numberInList, liste, img):
-    if liste.index(numberInList) == clickAmount:
-        pictureLocationer(numberInList, liste, img)
-    else:
-        pictureLocationer(numberInList)
-
-
 # Button Definers In While Loop--------------------------------------------------------------------------------------------------------
 def buttonCircleDefinerRestart(mouse_pos):
     global page
@@ -127,37 +90,37 @@ def buttonCircleDefinerNext(mouse_pos):
         clickAmount = 0
 
 
-def buttonRectDefinerForPage(mouse_pos, pageNum: float):
+def buttonRectDefinerForPage(mouse_pos, pageNum: float, liste, img):
     global clickAmount
 
-    rect1a_button = pygame.Rect(40, 760, 200, 200)
-    rect2a_button = pygame.Rect(280, 760, 200, 200)
-    rect3a_button = pygame.Rect(520, 760, 200, 200)
-    rect4a_button = pygame.Rect(760, 760, 200, 200)
-
     if (rect1a_button.collidepoint(mouse_pos)) & (page == pageNum):
-        rect1a_button_pressed()
+        rectButtonPressedHelper(40, liste, img)
         clickAmount += 1
 
     if (rect2a_button.collidepoint(mouse_pos)) & (page == pageNum):
-        rect2a_button_pressed()
+        rectButtonPressedHelper(280, liste, img)
         clickAmount += 1
 
     if (rect3a_button.collidepoint(mouse_pos)) & (page == pageNum):
-        rect3a_button_pressed()
+        rectButtonPressedHelper(520, liste, img)
         clickAmount += 1
 
     if (rect4a_button.collidepoint(mouse_pos)) & (page == pageNum):
-        rect4a_button_pressed()
+        rectButtonPressedHelper(760, liste, img)
         clickAmount += 1
+
+
+def rectButtonPressedHelper(numberInList, liste, img):
+    if liste.index(numberInList) == clickAmount:
+        pictureLocationer(numberInList, liste, img)
+    else:
+        pictureLocationer(numberInList)
 
 
 # MAIN--------------------------------------------------------------------------------------------------------
 while running:
 
     # PAGES --------------------------------------------------
-    pagesWithImagesSplit()
-
     if page == 0:
         page0()
         circle_next_button0 = buttonNextGeneral(0)
@@ -240,8 +203,8 @@ while running:
             buttonCircleDefinerRestart(mouse_pos)
             buttonCircleDefinerNext(mouse_pos)
 
-            buttonRectDefinerForPage(mouse_pos, 1.5)
-            buttonRectDefinerForPage(mouse_pos, 3.5)
-            buttonRectDefinerForPage(mouse_pos, 5.5)
-            buttonRectDefinerForPage(mouse_pos, 7.5)
-            buttonRectDefinerForPage(mouse_pos, 9.5)
+            buttonRectDefinerForPage(mouse_pos, 1.5, yeni_liste1, img1)
+            buttonRectDefinerForPage(mouse_pos, 3.5, yeni_liste2, img2)
+            buttonRectDefinerForPage(mouse_pos, 5.5, yeni_liste3, img3)
+            buttonRectDefinerForPage(mouse_pos, 7.5, yeni_liste4, img4)
+            buttonRectDefinerForPage(mouse_pos, 9.5, yeni_liste5, img5)

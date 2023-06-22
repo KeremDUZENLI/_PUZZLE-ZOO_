@@ -42,3 +42,8 @@ circle_next_button7 = pygame.Rect(0, 0, 0, 0)
 circle_next_button8 = pygame.Rect(0, 0, 0, 0)
 circle_next_button9 = pygame.Rect(0, 0, 0, 0)
 circle_next_button10 = pygame.Rect(0, 0, 0, 0)
+
+rect1a_button = pygame.Rect(40, 760, 200, 200)
+rect2a_button = pygame.Rect(280, 760, 200, 200)
+rect3a_button = pygame.Rect(520, 760, 200, 200)
+rect4a_button = pygame.Rect(760, 760, 200, 200)
