@@ -90,24 +90,37 @@ def buttonCircleDefinerNext(mouse_pos):
         clickAmount = 0
 
 
-def buttonRectDefinerForPage(mouse_pos, pageNum: float, liste, img):
+def buttonRectDefinerForPage(mouse_pos, pageNum: float):
     global clickAmount
+    xliste, img = pageDefiner(pageNum)
 
     if (rect1a_button.collidepoint(mouse_pos)) & (page == pageNum):
-        rectButtonPressedHelper(40, liste, img)
+        rectButtonPressedHelper(40, xliste, img)
         clickAmount += 1
 
     if (rect2a_button.collidepoint(mouse_pos)) & (page == pageNum):
-        rectButtonPressedHelper(280, liste, img)
+        rectButtonPressedHelper(280, xliste, img)
         clickAmount += 1
 
     if (rect3a_button.collidepoint(mouse_pos)) & (page == pageNum):
-        rectButtonPressedHelper(520, liste, img)
+        rectButtonPressedHelper(520, xliste, img)
         clickAmount += 1
 
     if (rect4a_button.collidepoint(mouse_pos)) & (page == pageNum):
-        rectButtonPressedHelper(760, liste, img)
+        rectButtonPressedHelper(760, xliste, img)
         clickAmount += 1
+
+
+def pageDefiner(pageNum: float):
+    mapping = {
+        1.5: (yeni_liste1, img1),
+        3.5: (yeni_liste2, img2),
+        5.5: (yeni_liste3, img3),
+        7.5: (yeni_liste4, img4),
+        9.5: (yeni_liste5, img5)
+    }
+
+    return mapping.get(pageNum)
 
 
 def rectButtonPressedHelper(numberInList, liste, img):
@@ -203,8 +216,8 @@ while running:
             buttonCircleDefinerRestart(mouse_pos)
             buttonCircleDefinerNext(mouse_pos)
 
-            buttonRectDefinerForPage(mouse_pos, 1.5, yeni_liste1, img1)
-            buttonRectDefinerForPage(mouse_pos, 3.5, yeni_liste2, img2)
-            buttonRectDefinerForPage(mouse_pos, 5.5, yeni_liste3, img3)
-            buttonRectDefinerForPage(mouse_pos, 7.5, yeni_liste4, img4)
-            buttonRectDefinerForPage(mouse_pos, 9.5, yeni_liste5, img5)
+            buttonRectDefinerForPage(mouse_pos, 1.5)
+            buttonRectDefinerForPage(mouse_pos, 3.5)
+            buttonRectDefinerForPage(mouse_pos, 5.5)
+            buttonRectDefinerForPage(mouse_pos, 7.5)
+            buttonRectDefinerForPage(mouse_pos, 9.5)
