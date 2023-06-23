@@ -1,80 +1,80 @@
 from globals import *
 
 
-def buttonRestart(number: int):
+def button_circle_restart(number_page: int):
     pygame.draw.circle(screen, (255, 0, 0), [900, 250], 50)
-    screen.blit(img_restart, (860, 210))
+    screen.blit(image_button_restart, (860, 210))
 
-    if number == 1:
-        circle_restart_button1 = pygame.Rect(850, 200, 100, 100)
-        return circle_restart_button1
+    if number_page == 1:
+        button_circle_restart_1 = pygame.Rect(850, 200, 100, 100)
+        return button_circle_restart_1
 
-    if number == 2:
-        circle_restart_button3 = pygame.Rect(850, 200, 100, 100)
-        return circle_restart_button3
+    if number_page == 2:
+        button_circle_restart_3 = pygame.Rect(850, 200, 100, 100)
+        return button_circle_restart_3
 
-    if number == 3:
-        circle_restart_button5 = pygame.Rect(850, 200, 100, 100)
-        return circle_restart_button5
+    if number_page == 3:
+        button_circle_restart_5 = pygame.Rect(850, 200, 100, 100)
+        return button_circle_restart_5
 
-    if number == 4:
-        circle_restart_button7 = pygame.Rect(850, 200, 100, 100)
-        return circle_restart_button7
+    if number_page == 4:
+        button_circle_restart_7 = pygame.Rect(850, 200, 100, 100)
+        return button_circle_restart_7
 
-    if number == 5:
-        circle_restart_button9 = pygame.Rect(850, 200, 100, 100)
-        return circle_restart_button9
+    if number_page == 5:
+        button_circle_restart_9 = pygame.Rect(850, 200, 100, 100)
+        return button_circle_restart_9
 
 
-def buttonNextGeneral(number: int):
-    if number == 0:
-        circle_next_button0 = pygame.Rect(450, 730, 100, 100)
-        return circle_next_button0
+def button_circle_next(number_page: int):
+    if number_page == 0:
+        button_circle_next_0 = pygame.Rect(450, 730, 100, 100)
+        return button_circle_next_0
 
     else:
-        return buttonNext(number)
+        return button_circle_next_helper(number_page)
 
 
-def buttonNext(number: int):
+def button_circle_next_helper(number_page: int):
     pygame.draw.circle(screen, (0, 255, 0), [900, 550], 50)
-    screen.blit(img_next, (860, 510))
+    screen.blit(image_button_next, (860, 510))
 
-    if number == 1:
-        circle_next_button1 = pygame.Rect(850, 500, 100, 100)
-        return circle_next_button1
+    if number_page == 1:
+        button_circle_next_1 = pygame.Rect(850, 500, 100, 100)
+        return button_circle_next_1
 
-    if number == 2:
-        circle_next_button2 = pygame.Rect(850, 500, 100, 100)
-        return circle_next_button2
+    if number_page == 2:
+        button_circle_next_2 = pygame.Rect(850, 500, 100, 100)
+        return button_circle_next_2
 
-    if number == 3:
-        circle_next_button3 = pygame.Rect(850, 500, 100, 100)
-        return circle_next_button3
+    if number_page == 3:
+        button_circle_next_3 = pygame.Rect(850, 500, 100, 100)
+        return button_circle_next_3
 
-    if number == 4:
-        circle_next_button4 = pygame.Rect(850, 500, 100, 100)
-        return circle_next_button4
+    if number_page == 4:
+        button_circle_next_4 = pygame.Rect(850, 500, 100, 100)
+        return button_circle_next_4
 
-    if number == 5:
-        circle_next_button5 = pygame.Rect(850, 500, 100, 100)
-        return circle_next_button5
+    if number_page == 5:
+        button_circle_next_5 = pygame.Rect(850, 500, 100, 100)
+        return button_circle_next_5
 
-    if number == 6:
-        circle_next_button6 = pygame.Rect(850, 500, 100, 100)
-        return circle_next_button6
+    if number_page == 6:
+        button_circle_next_6 = pygame.Rect(850, 500, 100, 100)
+        return button_circle_next_6
 
-    if number == 7:
-        circle_next_button7 = pygame.Rect(850, 500, 100, 100)
-        return circle_next_button7
+    if number_page == 7:
+        button_circle_next_7 = pygame.Rect(850, 500, 100, 100)
+        return button_circle_next_7
 
-    if number == 8:
-        circle_next_button8 = pygame.Rect(850, 500, 100, 100)
-        return circle_next_button8
+    if number_page == 8:
+        button_circle_next_8 = pygame.Rect(850, 500, 100, 100)
+        return button_circle_next_8
 
-    if number == 9:
-        circle_next_button9 = pygame.Rect(850, 500, 100, 100)
-        return circle_next_button9
+    if number_page == 9:
+        button_circle_next_9 = pygame.Rect(850, 500, 100, 100)
+        return button_circle_next_9
 
-    if number == 10:
-        circle_next_button10 = pygame.Rect(850, 500, 100, 100)
-        return circle_next_button10
+    if number_page == 10:
+        button_circle_next_10 = pygame.Rect(850, 500, 100, 100)
+        return button_circle_next_10
