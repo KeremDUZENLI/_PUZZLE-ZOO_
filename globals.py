@@ -2,19 +2,19 @@ import pygame
 import random
 
 
-def image_provider(path: str, width: int = 400, height: int = 400):
+def provide_image(path: str, width: int = 400, height: int = 400):
     image = pygame.image.load(path)
     return pygame.transform.scale(image, (width, height))
 
 
-def image_provider_divided_four(image):
+def provide_image_divided_four(image):
     screen.fill((255, 255, 255))
 
     image_scaled = pygame.transform.scale(image, (500, 500))
     screen.blit(image_scaled, (250, 250))
 
 
-def list_new_creator():
+def create_list_new():
     list_new = []
     for _ in range(100):
         number_chosen = random.choice([40, 280, 520, 760])
@@ -36,22 +36,22 @@ running = True
 
 
 font_default = pygame.font.SysFont("calibri", 50, True)
-image_background = image_provider("images/[Background].jpg", 1000, 1000)
-image_button_next = image_provider("images/[Next].png", 80, 80)
-image_button_restart = image_provider("images/[Restart].png", 80, 80)
+image_background = provide_image("images/[Background].jpg", 1000, 1000)
+image_button_next = provide_image("images/[Next].png", 80, 80)
+image_button_restart = provide_image("images/[Restart].png", 80, 80)
 
 
-image_1 = image_provider("images/1.png")
-image_2 = image_provider("images/2.png")
-image_3 = image_provider("images/3.png")
-image_4 = image_provider("images/4.png")
-image_5 = image_provider("images/5.png")
+image_1 = provide_image("images/1.png")
+image_2 = provide_image("images/2.png")
+image_3 = provide_image("images/3.png")
+image_4 = provide_image("images/4.png")
+image_5 = provide_image("images/5.png")
 
-list_new_1 = list_new_creator()
-list_new_2 = list_new_creator()
-list_new_3 = list_new_creator()
-list_new_4 = list_new_creator()
-list_new_5 = list_new_creator()
+list_new_1 = create_list_new()
+list_new_2 = create_list_new()
+list_new_3 = create_list_new()
+list_new_4 = create_list_new()
+list_new_5 = create_list_new()
 
 
 button_circle_restart_1 = pygame.Rect(0, 0, 0, 0)

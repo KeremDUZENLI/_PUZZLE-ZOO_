@@ -43,7 +43,7 @@ def page_main():
     screen.blit(image_button_next, (460, 740))
 
 
-def page_updater(number_page: float):
+def update_page(number_page: float):
     pygame.display.update()
     page = number_page
     return page
