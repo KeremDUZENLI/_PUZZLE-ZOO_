@@ -43,13 +43,6 @@ def page_main():
     screen.blit(image_button_next, (460, 740))
 
 
-def image_provider_divided_four(image):
-    screen.fill((255, 255, 255))
-
-    image_scaled = pygame.transform.scale(image, (500, 500))
-    screen.blit(image_scaled, (250, 250))
-
-
 def page_updater(number_page: float):
     pygame.display.update()
     page = number_page

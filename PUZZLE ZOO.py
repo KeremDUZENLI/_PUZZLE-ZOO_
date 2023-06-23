@@ -4,8 +4,7 @@ from buttons import *
 from functions import *
 
 
-# Button Definers In While Loop--------------------------------------------------------------------------------------------------------
-def buttonCircleDefinerRestart(mouse_pos):
+def button_circle_restart_definer(mouse_pos):
     global page
     global number_click
 
@@ -35,7 +34,7 @@ def buttonCircleDefinerRestart(mouse_pos):
         number_click = 0
 
 
-def buttonCircleDefinerNext(mouse_pos):
+def button_circle_next_definer(mouse_pos):
     global page
     global number_click
 
@@ -90,7 +89,7 @@ def buttonCircleDefinerNext(mouse_pos):
         number_click = 0
 
 
-def button_rectangle_four_picture(mouse_pos, number_page: float):
+def button_rectangle_four_picture_definer(mouse_pos, number_page: float):
     global page
     global number_click
     list_created, image = page_rectangle_four_picture_definer(number_page)
@@ -132,7 +131,6 @@ def page_rectangle_four_picture_validator(list_number, list_giving, image):
         page_rectangle_four_picture_validator_colorer(list_number)
 
 
-# MAIN--------------------------------------------------------------------------------------------------------
 while running:
 
     # PAGES --------------------------------------------------
@@ -215,11 +213,11 @@ while running:
         if event.type == pygame.MOUSEBUTTONDOWN:
             mouse_pos = event.pos
 
-            buttonCircleDefinerRestart(mouse_pos)
-            buttonCircleDefinerNext(mouse_pos)
+            button_circle_restart_definer(mouse_pos)
+            button_circle_next_definer(mouse_pos)
 
-            button_rectangle_four_picture(mouse_pos, 1.5)
-            button_rectangle_four_picture(mouse_pos, 3.5)
-            button_rectangle_four_picture(mouse_pos, 5.5)
-            button_rectangle_four_picture(mouse_pos, 7.5)
-            button_rectangle_four_picture(mouse_pos, 9.5)
+            button_rectangle_four_picture_definer(mouse_pos, 1.5)
+            button_rectangle_four_picture_definer(mouse_pos, 3.5)
+            button_rectangle_four_picture_definer(mouse_pos, 5.5)
+            button_rectangle_four_picture_definer(mouse_pos, 7.5)
+            button_rectangle_four_picture_definer(mouse_pos, 9.5)

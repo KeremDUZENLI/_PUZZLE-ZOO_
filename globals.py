@@ -2,14 +2,16 @@ import pygame
 import random
 
 
-pygame.init()
-pygame.display.set_caption("PUZZLE ZOO")
-screen = pygame.display.set_mode((1000, 1000))
-
-
 def image_provider(path: str, width: int = 400, height: int = 400):
     image = pygame.image.load(path)
     return pygame.transform.scale(image, (width, height))
+
+
+def image_provider_divided_four(image):
+    screen.fill((255, 255, 255))
+
+    image_scaled = pygame.transform.scale(image, (500, 500))
+    screen.blit(image_scaled, (250, 250))
 
 
 def list_new_creator():
@@ -23,9 +25,20 @@ def list_new_creator():
     return list_new
 
 
+pygame.init()
+pygame.display.set_caption("PUZZLE ZOO")
+screen = pygame.display.set_mode((1000, 1000))
+
+
 page = 0
 number_click = 0
 running = True
+
+
+font_default = pygame.font.SysFont("calibri", 50, True)
+image_background = image_provider("images/[Background].jpg", 1000, 1000)
+image_button_next = image_provider("images/[Next].png", 80, 80)
+image_button_restart = image_provider("images/[Restart].png", 80, 80)
 
 
 image_1 = image_provider("images/1.png")
@@ -39,12 +52,6 @@ list_new_2 = list_new_creator()
 list_new_3 = list_new_creator()
 list_new_4 = list_new_creator()
 list_new_5 = list_new_creator()
-
-
-font_default = pygame.font.SysFont("calibri", 50, True)
-image_background = image_provider("images/[Background].jpg", 1000, 1000)
-image_button_next = image_provider("images/[Next].png", 80, 80)
-image_button_restart = image_provider("images/[Restart].png", 80, 80)
 
 
 button_circle_restart_1 = pygame.Rect(0, 0, 0, 0)
