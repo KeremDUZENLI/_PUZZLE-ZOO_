@@ -111,18 +111,6 @@ def define_button_rectangle_four_picture(mouse_pos, number_page: float):
         number_click += 1
 
 
-def define_page_rectangle_four_picture(number_page: float):
-    mapping = {
-        1.5: (list_new_1, image_1),
-        3.5: (list_new_2, image_2),
-        5.5: (list_new_3, image_3),
-        7.5: (list_new_4, image_4),
-        9.5: (list_new_5, image_5)
-    }
-
-    return mapping.get(number_page)
-
-
 def validate_page_rectangle_four_picture(list_number, list_giving, image):
     if list_giving.index(list_number) == number_click:
         color_page_rectangle_four_picture(
