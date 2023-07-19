@@ -6,6 +6,7 @@ from functions import *
 
 pages = Pages()
 buttons = Buttons()
+functions = Functions()
 
 
 def define_button_circle_restart(mouse_pos):
@@ -117,10 +118,10 @@ def define_button_rectangle_four_picture(mouse_pos, number_page: float):
 
 def validate_page_rectangle_four_picture(list_number, list_giving, image):
     if list_giving.index(list_number) == number_click:
-        color_page_rectangle_four_picture(
+        functions.color_page_rectangle_four_picture(
             list_number, list_giving, image)
     else:
-        color_page_rectangle_four_picture(list_number)
+        functions.color_page_rectangle_four_picture(list_number)
 
 
 while running:
@@ -157,7 +158,7 @@ while running:
         pygame.display.update()
 
     if page == 1:
-        create_page_rectangle_four_picture(list_new_1, image_1)
+        functions.create_page_rectangle_four_picture(list_new_1, image_1)
         pages.draw_screen()
 
         button_circle_restart_1 = buttons.button_circle_restart()
@@ -165,7 +166,7 @@ while running:
         page = pages.update_page(1.5)
 
     if page == 3:
-        create_page_rectangle_four_picture(list_new_2, image_2)
+        functions.create_page_rectangle_four_picture(list_new_2, image_2)
         pages.draw_screen()
 
         button_circle_restart_3 = buttons.button_circle_restart()
@@ -173,7 +174,7 @@ while running:
         page = pages.update_page(3.5)
 
     if page == 5:
-        create_page_rectangle_four_picture(list_new_3, image_3)
+        functions.create_page_rectangle_four_picture(list_new_3, image_3)
         pages.draw_screen()
 
         button_circle_restart_5 = buttons.button_circle_restart()
@@ -181,7 +182,7 @@ while running:
         page = pages.update_page(5.5)
 
     if page == 7:
-        create_page_rectangle_four_picture(list_new_4, image_4)
+        functions.create_page_rectangle_four_picture(list_new_4, image_4)
         pages.draw_screen()
 
         button_circle_restart_7 = buttons.button_circle_restart()
@@ -189,7 +190,7 @@ while running:
         page = pages.update_page(7.5)
 
     if page == 9:
-        create_page_rectangle_four_picture(list_new_5, image_5)
+        functions.create_page_rectangle_four_picture(list_new_5, image_5)
         pages.draw_screen()
 
         button_circle_restart_9 = buttons.button_circle_restart()

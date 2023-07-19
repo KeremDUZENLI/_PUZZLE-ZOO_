@@ -3,7 +3,7 @@ from globals import *
 
 class Buttons:
     def __init__(self):
-        self.number_click = 0
+        pass
 
     def button_circle_restart(self):
         pygame.draw.circle(screen, (255, 0, 0), [900, 250], 50)
