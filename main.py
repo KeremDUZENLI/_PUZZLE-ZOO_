@@ -3,6 +3,8 @@ from pages import *
 from buttons import *
 from functions import *
 
+pages = Pages()
+
 
 def define_button_circle_restart(mouse_pos):
     global page
@@ -123,7 +125,7 @@ while running:
 
     # PAGES --------------------------------------------------
     if page == 0:
-        page_main()
+        pages.page_main()
         button_circle_next_0
         pygame.display.update()
 
@@ -154,43 +156,43 @@ while running:
 
     if page == 1:
         create_page_rectangle_four_picture(list_new_1, image_1)
-        draw_screen()
+        pages.draw_screen()
 
         button_circle_restart_1 = button_circle_restart()
         button_circle_next_1 = button_circle_next()
-        page = update_page(1.5)
+        page = pages.update_page(1.5)
 
     if page == 3:
         create_page_rectangle_four_picture(list_new_2, image_2)
-        draw_screen()
+        pages.draw_screen()
 
         button_circle_restart_3 = button_circle_restart()
         button_circle_next_3 = button_circle_next()
-        page = update_page(3.5)
+        page = pages.update_page(3.5)
 
     if page == 5:
         create_page_rectangle_four_picture(list_new_3, image_3)
-        draw_screen()
+        pages.draw_screen()
 
         button_circle_restart_5 = button_circle_restart()
         button_circle_next_5 = button_circle_next()
-        page = update_page(5.5)
+        page = pages.update_page(5.5)
 
     if page == 7:
         create_page_rectangle_four_picture(list_new_4, image_4)
-        draw_screen()
+        pages.draw_screen()
 
         button_circle_restart_7 = button_circle_restart()
         button_circle_next_7 = button_circle_next()
-        page = update_page(7.5)
+        page = pages.update_page(7.5)
 
     if page == 9:
         create_page_rectangle_four_picture(list_new_5, image_5)
-        draw_screen()
+        pages.draw_screen()
 
         button_circle_restart_9 = button_circle_restart()
         button_circle_next_9 = button_circle_next()
-        page = update_page(9.5)
+        page = pages.update_page(9.5)
 
     # EVENTS --------------------------------------------------
     for event in pygame.event.get():
