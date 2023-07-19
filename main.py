@@ -3,7 +3,9 @@ from pages import *
 from buttons import *
 from functions import *
 
+
 pages = Pages()
+buttons = Buttons()
 
 
 def define_button_circle_restart(mouse_pos):
@@ -131,67 +133,67 @@ while running:
 
     if page == 2:
         provide_image_divided_four(image_1)
-        button_circle_next_2 = button_circle_next()
+        button_circle_next_2 = buttons.button_circle_next()
         pygame.display.update()
 
     if page == 4:
         provide_image_divided_four(image_2)
-        button_circle_next_4 = button_circle_next()
+        button_circle_next_4 = buttons.button_circle_next()
         pygame.display.update()
 
     if page == 6:
         provide_image_divided_four(image_3)
-        button_circle_next_6 = button_circle_next()
+        button_circle_next_6 = buttons.button_circle_next()
         pygame.display.update()
 
     if page == 8:
         provide_image_divided_four(image_4)
-        button_circle_next_8 = button_circle_next()
+        button_circle_next_8 = buttons.button_circle_next()
         pygame.display.update()
 
     if page == 10:
         provide_image_divided_four(image_5)
-        button_circle_next_10 = button_circle_next()
+        button_circle_next_10 = buttons.button_circle_next()
         pygame.display.update()
 
     if page == 1:
         create_page_rectangle_four_picture(list_new_1, image_1)
         pages.draw_screen()
 
-        button_circle_restart_1 = button_circle_restart()
-        button_circle_next_1 = button_circle_next()
+        button_circle_restart_1 = buttons.button_circle_restart()
+        button_circle_next_1 = buttons.button_circle_next()
         page = pages.update_page(1.5)
 
     if page == 3:
         create_page_rectangle_four_picture(list_new_2, image_2)
         pages.draw_screen()
 
-        button_circle_restart_3 = button_circle_restart()
-        button_circle_next_3 = button_circle_next()
+        button_circle_restart_3 = buttons.button_circle_restart()
+        button_circle_next_3 = buttons.button_circle_next()
         page = pages.update_page(3.5)
 
     if page == 5:
         create_page_rectangle_four_picture(list_new_3, image_3)
         pages.draw_screen()
 
-        button_circle_restart_5 = button_circle_restart()
-        button_circle_next_5 = button_circle_next()
+        button_circle_restart_5 = buttons.button_circle_restart()
+        button_circle_next_5 = buttons.button_circle_next()
         page = pages.update_page(5.5)
 
     if page == 7:
         create_page_rectangle_four_picture(list_new_4, image_4)
         pages.draw_screen()
 
-        button_circle_restart_7 = button_circle_restart()
-        button_circle_next_7 = button_circle_next()
+        button_circle_restart_7 = buttons.button_circle_restart()
+        button_circle_next_7 = buttons.button_circle_next()
         page = pages.update_page(7.5)
 
     if page == 9:
         create_page_rectangle_four_picture(list_new_5, image_5)
         pages.draw_screen()
 
-        button_circle_restart_9 = button_circle_restart()
-        button_circle_next_9 = button_circle_next()
+        button_circle_restart_9 = buttons.button_circle_restart()
+        button_circle_next_9 = buttons.button_circle_next()
         page = pages.update_page(9.5)
 
     # EVENTS --------------------------------------------------
