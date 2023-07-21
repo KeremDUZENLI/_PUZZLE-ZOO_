@@ -124,9 +124,15 @@ def validate_page_rectangle_four_picture(list_number, list_giving, image):
         functions.color_page_rectangle_four_picture(list_number)
 
 
-while running:
+def define_pages_with_pictures():
+    global page
 
-    # PAGES --------------------------------------------------
+    global button_circle_next_2
+    global button_circle_next_4
+    global button_circle_next_6
+    global button_circle_next_8
+    global button_circle_next_10
+
     if page == 0:
         pages.page_main()
         button_circle_next_0
@@ -156,6 +162,22 @@ while running:
         provide_image_divided_four(image_5)
         button_circle_next_10 = buttons.button_circle_next()
         pygame.display.update()
+
+
+def define_pages_without_pictures():
+    global page
+
+    global button_circle_restart_1
+    global button_circle_restart_3
+    global button_circle_restart_5
+    global button_circle_restart_7
+    global button_circle_restart_9
+
+    global button_circle_next_1
+    global button_circle_next_3
+    global button_circle_next_5
+    global button_circle_next_7
+    global button_circle_next_9
 
     if page == 1:
         functions.create_page_rectangle_four_picture(list_new_1, image_1)
@@ -196,6 +218,12 @@ while running:
         button_circle_restart_9 = buttons.button_circle_restart()
         button_circle_next_9 = buttons.button_circle_next()
         page = pages.update_page(9.5)
+
+
+while running:
+    # PAGES --------------------------------------------------
+    define_pages_with_pictures()
+    define_pages_without_pictures()
 
     # EVENTS --------------------------------------------------
     for event in pygame.event.get():

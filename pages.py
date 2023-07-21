@@ -3,7 +3,7 @@ from globals import *
 
 class Pages:
     def __init__(self):
-        self.page = 0
+        pass
 
     def draw_screen(self):
         self.draw_rectangle_middle()

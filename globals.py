@@ -72,6 +72,7 @@ button_circle_restart_5 = pygame.Rect(0, 0, 0, 0)
 button_circle_restart_7 = pygame.Rect(0, 0, 0, 0)
 button_circle_restart_9 = pygame.Rect(0, 0, 0, 0)
 
+
 button_circle_next_0 = pygame.Rect(450, 730, 100, 100)
 button_circle_next_1 = pygame.Rect(0, 0, 0, 0)
 button_circle_next_2 = pygame.Rect(0, 0, 0, 0)
@@ -83,6 +84,7 @@ button_circle_next_7 = pygame.Rect(0, 0, 0, 0)
 button_circle_next_8 = pygame.Rect(0, 0, 0, 0)
 button_circle_next_9 = pygame.Rect(0, 0, 0, 0)
 button_circle_next_10 = pygame.Rect(0, 0, 0, 0)
+
 
 button_rectangle_four_picture_1 = pygame.Rect(40, 760, 200, 200)
 button_rectangle_four_picture_2 = pygame.Rect(280, 760, 200, 200)
