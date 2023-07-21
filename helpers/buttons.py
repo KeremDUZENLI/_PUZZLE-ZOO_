@@ -1,4 +1,4 @@
-from globals import *
+from helpers.variables import *
 
 
 class Buttons:

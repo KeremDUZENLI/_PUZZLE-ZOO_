@@ -1,7 +1,7 @@
-from globals import *
-from pages import *
-from buttons import *
-from functions import *
+from helpers.functions import *
+from helpers.buttons import *
+from helpers.pages import *
+from helpers.variables import *
 
 
 pages = Pages()
